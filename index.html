@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mumtaz Windoor Aluminium & Glass Works — Specialists in aluminium windows, glass doors, shower cabins, stainless steel railings, wallpaper and glass papers. Lahore, Pakistan.">
+  <title>Mumtaz Windoor Aluminium & Glass Works | Lahore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --steel: #1C2B3A; --steel-light: #2A3F52; --steel-mid: #334E63;
+      --glass-blue: #5DB8D4; --glass-pale: #B8E0EC;
+      --gold: #C9A84C; --cream: #F5F0E8; --white: #FFFFFF;
+      --text-dark: #0F1A24; --text-mid: #4A6070;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text-dark); overflow-x: hidden; }
+
+    /* ── NAV ── */
+    nav { background: var(--steel); padding: 1rem 2.5rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+    .logo { font-family: 'Rajdhani', sans-serif; font-size: 1.45rem; font-weight: 700; color: var(--white); text-decoration: none; }
+    .logo span { color: var(--glass-blue); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.7); font-size: 0.85rem; text-decoration: none; letter-spacing: 0.4px; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--glass-blue); }
+    .nav-cta { background: var(--glass-blue); color: var(--steel); font-weight: 700; font-size: 0.85rem; padding: 0.55rem 1.4rem; border-radius: 4px; text-decoration: none; font-family: 'Rajdhani', sans-serif; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--gold); color: var(--white); }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; }
+
+    /* ── HERO ── */
+    .hero { background: var(--steel); min-height: 560px; display: flex; align-items: center; position: relative; overflow: hidden; padding: 4rem 2.5rem; }
+    .hero-bg-panes { position: absolute; inset: 0; display: flex; pointer-events: none; }
+    .pane { flex: 1; border-right: 1px solid rgba(93,184,212,0.10); }
+    .pane:nth-child(2) { background: rgba(93,184,212,0.025); }
+    .pane:nth-child(5) { background: rgba(201,168,76,0.03); }
+    .hero-content { position: relative; z-index: 2; max-width: 560px; }
+    .eyebrow { font-size: 0.72rem; letter-spacing: 3px; color: var(--glass-blue); text-transform: uppercase; margin-bottom: 1.2rem; font-weight: 500; }
+    .hero h1 { font-family: 'Rajdhani', sans-serif; font-size: 3.8rem; font-weight: 700; color: var(--white); line-height: 1.05; margin-bottom: 1.2rem; }
+    .hero h1 em { color: var(--glass-blue); font-style: normal; }
+    .hero p { font-size: 1rem; color: rgba(255,255,255,0.6); line-height: 1.75; max-width: 440px; font-weight: 300; margin-bottom: 2rem; }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary { background: var(--glass-blue); color: var(--steel); font-weight: 700; font-size: 0.95rem; padding: 0.8rem 1.9rem; border-radius: 4px; text-decoration: none; font-family: 'Rajdhani', sans-serif; transition: background 0.2s; display: inline-block; }
+    .btn-primary:hover { background: var(--gold); color: var(--white); }
+    .btn-outline { border: 1.5px solid rgba(93,184,212,0.45); color: var(--glass-pale); font-size: 0.95rem; padding: 0.8rem 1.9rem; border-radius: 4px; text-decoration: none; display: inline-block; transition: border-color 0.2s; }
+    .btn-outline:hover { border-color: var(--glass-blue); color: var(--white); }
+    .hero-right { position: absolute; right: 2.5rem; top: 50%; transform: translateY(-50%); width: 360px; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+    .hero-img-box { background: var(--steel-light); border: 1px solid rgba(93,184,212,0.15); border-radius: 3px; overflow: hidden; }
+    .hero-img-box:nth-child(1) { grid-column: 1 / 3; }
+    .hero-img-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-img-box:nth-child(1) { height: 170px; }
+    .hero-img-box:nth-child(2), .hero-img-box:nth-child(3) { height: 110px; }
+    .img-ph { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 1rem; }
+    .img-ph svg { width: 32px; height: 32px; opacity: 0.28; }
+    .img-ph span { font-size: 0.6rem; color: rgba(255,255,255,0.28); letter-spacing: 1.5px; text-align: center; }
+
+    /* ── STATS ── */
+    .stats { background: var(--cream); padding: 1.6rem 2.5rem; display: flex; justify-content: center; border-bottom: 2px solid var(--steel); flex-wrap: wrap; gap: 1rem; }
+    .stat { text-align: center; padding: 0 3rem; border-right: 1px solid rgba(28,43,58,0.15); }
+    .stat:last-child { border-right: none; }
+    .stat-num { font-family: 'Rajdhani', sans-serif; font-size: 2.4rem; font-weight: 700; color: var(--steel); line-height: 1; }
+    .stat-num span { color: var(--glass-blue); }
+    .stat-label { font-size: 0.7rem; color: var(--text-mid); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 4px; }
+
+    /* ── SECTIONS ── */
+    .section { padding: 5rem 2.5rem; }
+    .section-inner { max-width: 940px; margin: 0 auto; }
+    .sec-label { font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; color: var(--glass-blue); font-weight: 600; margin-bottom: 0.6rem; }
+    .sec-title { font-family: 'Rajdhani', sans-serif; font-size: 2.3rem; font-weight: 700; color: var(--steel); line-height: 1.1; margin-bottom: 0.6rem; }
+    .sec-sub { font-size: 0.95rem; color: var(--text-mid); line-height: 1.75; max-width: 520px; font-weight: 300; }
+
+    /* ── SERVICES ── */
+    .services-bg { background: var(--steel); }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 1px; background: rgba(93,184,212,0.08); margin-top: 2.5rem; }
+    .service-card { background: var(--steel-light); padding: 1.9rem 1.6rem; border: 1px solid rgba(93,184,212,0.07); transition: background 0.2s; }
+    .service-card:hover { background: var(--steel-mid); }
+    .service-icon { width: 46px; height: 46px; border-radius: 6px; background: rgba(93,184,212,0.1); border: 1px solid rgba(93,184,212,0.18); display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; }
+    .service-icon svg { width: 22px; height: 22px; stroke: var(--glass-blue); stroke-width: 1.5; fill: none; }
+    .gold-line { width: 26px; height: 2px; background: var(--gold); margin-bottom: 1.1rem; }
+    .service-card h3 { font-family: 'Rajdhani', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--white); margin-bottom: 0.45rem; }
+    .service-card p { font-size: 0.82rem; color: rgba(255,255,255,0.48); line-height: 1.65; font-weight: 300; }
+
+    /* ── GALLERY ── */
+    .work-section { background: var(--white); }
+    #gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 2.5rem; }
+    .g-item { border-radius: 4px; overflow: hidden; position: relative; cursor: pointer; }
+    .g-item:first-child { grid-column: 1 / 3; }
+    .g-thumb { width: 100%; padding-top: 68%; position: relative; background: var(--cream); border: 1px solid rgba(28,43,58,0.07); border-radius: 4px; overflow: hidden; }
+    .g-item:first-child .g-thumb { padding-top: 55%; }
+    .g-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .g-thumb .g-ph { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; }
+    .g-ph svg { width: 32px; height: 32px; opacity: 0.2; }
+    .g-ph span { font-size: 0.62rem; color: var(--text-mid); letter-spacing: 1px; text-align: center; padding: 0 1rem; }
+    .g-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(15,26,36,0.82), transparent); padding: 1.25rem 0.9rem 0.6rem; color: var(--white); font-size: 0.78rem; }
+    .g-cat-badge { display: inline-block; background: rgba(93,184,212,0.25); color: var(--glass-pale); font-size: 0.65rem; padding: 2px 8px; border-radius: 10px; margin-bottom: 4px; letter-spacing: 0.5px; }
+    .gallery-empty { text-align: center; padding: 3rem; color: var(--text-mid); font-size: 0.9rem; grid-column: 1/-1; }
+    .gallery-cta { text-align: center; margin-top: 2rem; }
+    .gallery-cta a { border: 1.5px solid rgba(28,43,58,0.18); color: var(--steel); padding: 0.75rem 2.25rem; border-radius: 4px; font-family: 'Rajdhani', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 1px; text-decoration: none; display: inline-block; transition: all 0.2s; }
+    .gallery-cta a:hover { background: var(--steel); color: var(--white); border-color: var(--steel); }
+
+    /* ── LIGHTBOX ── */
+    #lightbox { display: none; position: fixed; inset: 0; background: rgba(10,18,26,0.93); z-index: 500; align-items: center; justify-content: center; padding: 2rem; }
+    #lightbox.open { display: flex; }
+    #lightbox img { max-width: 90vw; max-height: 85vh; object-fit: contain; border-radius: 4px; }
+    #lightbox-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: 1.5px solid rgba(255,255,255,0.3); color: white; font-size: 1.4rem; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+    #lightbox-close:hover { background: rgba(255,255,255,0.1); }
+    #lightbox-info { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); text-align: center; }
+    #lightbox-info h3 { color: white; font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; }
+    #lightbox-info p { color: rgba(255,255,255,0.5); font-size: 0.82rem; margin-top: 4px; }
+
+    /* ── WHY US ── */
+    .why-section { background: var(--cream); }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+    .why-card { background: var(--white); border: 1px solid rgba(28,43,58,0.07); border-radius: 8px; padding: 1.6rem; border-left: 3px solid var(--glass-blue); }
+    .why-card h4 { font-family: 'Rajdhani', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--steel); margin-bottom: 0.45rem; }
+    .why-card p { font-size: 0.83rem; color: var(--text-mid); line-height: 1.65; font-weight: 300; }
+
+    /* ── REVIEW ── */
+    .review-strip { background: var(--steel); padding: 4rem 2.5rem; text-align: center; }
+    .stars { color: var(--gold); font-size: 1.25rem; margin-bottom: 1.1rem; letter-spacing: 4px; }
+    .review-text { font-family: 'Rajdhani', sans-serif; font-size: 1.6rem; font-weight: 400; color: var(--white); max-width: 580px; margin: 0 auto 0.85rem; line-height: 1.45; font-style: italic; }
+    .review-author { font-size: 0.78rem; color: rgba(255,255,255,0.42); letter-spacing: 2px; text-transform: uppercase; }
+    .review-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(93,184,212,0.09); border: 1px solid rgba(93,184,212,0.18); border-radius: 20px; padding: 0.35rem 1rem; margin-top: 1.3rem; font-size: 0.73rem; color: var(--glass-blue); letter-spacing: 1px; text-decoration: none; }
+    .g-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--glass-blue); flex-shrink: 0; }
+
+    /* ── CONTACT ── */
+    .contact-section { background: var(--white); padding: 5rem 2.5rem; }
+    .contact-inner { max-width: 940px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; }
+    .contact-info h3 { font-family: 'Rajdhani', sans-serif; font-size: 2rem; font-weight: 700; color: var(--steel); margin-bottom: 1.75rem; line-height: 1.15; }
+    .contact-row { display: flex; align-items: flex-start; gap: 0.85rem; margin-bottom: 1.4rem; }
+    .contact-row svg { width: 18px; height: 18px; stroke: var(--glass-blue); stroke-width: 1.5; fill: none; flex-shrink: 0; margin-top: 3px; }
+    .contact-row div p { font-size: 0.7rem; color: var(--text-mid); text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 3px; }
+    .contact-row div strong { font-size: 0.92rem; color: var(--steel); font-weight: 500; line-height: 1.5; }
+    .contact-row div strong a { color: var(--steel); text-decoration: none; }
+    .contact-form { background: var(--cream); border-radius: 8px; padding: 2rem; border: 1px solid rgba(28,43,58,0.07); }
+    .contact-form h4 { font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--steel); margin-bottom: 1.4rem; }
+    .form-group { margin-bottom: 1.1rem; }
+    .form-group label { font-size: 0.7rem; color: var(--text-mid); letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 5px; }
+    .form-group input, .form-group textarea, .form-group select { width: 100%; background: var(--white); border: 1px solid rgba(28,43,58,0.12); border-radius: 4px; padding: 0.65rem 0.8rem; font-size: 0.88rem; color: var(--text-dark); font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s; appearance: none; -webkit-appearance: none; }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--glass-blue); box-shadow: 0 0 0 3px rgba(93,184,212,0.12); }
+    .form-group textarea { resize: vertical; min-height: 90px; }
+    .submit-btn { width: 100%; background: var(--steel); color: var(--white); border: none; border-radius: 4px; padding: 0.85rem; font-family: 'Rajdhani', sans-serif; font-size: 1.05rem; font-weight: 700; letter-spacing: 1px; cursor: pointer; transition: background 0.2s; margin-top: 0.5rem; }
+    .submit-btn:hover { background: var(--glass-blue); color: var(--steel); }
+
+    /* ── MAP ── */
+    .map-section { background: var(--steel-light); }
+    .map-bar { max-width: 940px; margin: 0 auto; display: flex; align-items: center; padding: 1.75rem 2.5rem; gap: 1rem; }
+    .map-bar svg { width: 20px; height: 20px; stroke: var(--glass-blue); stroke-width: 1.5; fill: none; flex-shrink: 0; }
+    .map-bar p { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+    .map-bar a { color: var(--glass-blue); text-decoration: none; }
+    .map-bar a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ── */
+    footer { background: #0D1720; padding: 2.5rem 2.5rem 2rem; }
+    .footer-inner { max-width: 940px; margin: 0 auto; display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 2rem; }
+    .footer-brand .logo { font-size: 1.3rem; display: block; margin-bottom: 0.5rem; }
+    .footer-brand p { font-size: 0.78rem; color: rgba(255,255,255,0.3); line-height: 1.6; max-width: 240px; }
+    .footer-col h5 { font-family: 'Rajdhani', sans-serif; font-size: 0.78rem; font-weight: 700; color: var(--glass-pale); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.85rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.5rem; }
+    .footer-col ul a { font-size: 0.82rem; color: rgba(255,255,255,0.38); text-decoration: none; transition: color 0.2s; }
+    .footer-col ul a:hover { color: var(--glass-blue); }
+    .footer-bottom { max-width: 940px; margin: 2rem auto 0; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+    .footer-bottom p { font-size: 0.72rem; color: rgba(255,255,255,0.22); }
+    .admin-link-footer { font-size: 0.72rem; color: rgba(255,255,255,0.12); text-decoration: none; transition: color 0.3s; }
+    .admin-link-footer:hover { color: rgba(255,255,255,0.35); }
+
+    /* ── WHATSAPP FLOAT ── */
+    .wa-float { position: fixed; bottom: 1.75rem; right: 1.75rem; width: 54px; height: 54px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 16px rgba(37,211,102,0.35); transition: transform 0.2s; z-index: 200; }
+    .wa-float:hover { transform: scale(1.08); }
+    .wa-float svg { width: 28px; height: 28px; fill: white; }
+
+    /* ── ADMIN PANEL ── */
+    #admin-overlay { display: none; position: fixed; inset: 0; background: rgba(10,18,26,0.96); z-index: 1000; overflow-y: auto; }
+    #admin-overlay.open { display: block; }
+    .admin-wrap { max-width: 800px; margin: 0 auto; padding: 2rem; }
+    .admin-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .admin-header h2 { font-family: 'Rajdhani', sans-serif; font-size: 1.6rem; font-weight: 700; color: white; }
+    .admin-header p { font-size: 0.8rem; color: rgba(255,255,255,0.4); margin-top: 2px; }
+    .admin-close { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: white; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; font-size: 0.85rem; transition: background 0.2s; }
+    .admin-close:hover { background: rgba(255,255,255,0.15); }
+
+    /* Add post form */
+    .add-post-form { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.75rem; margin-bottom: 2rem; }
+    .add-post-form h3 { font-family: 'Rajdhani', sans-serif; font-size: 1.1rem; color: var(--glass-blue); margin-bottom: 1.25rem; }
+    .admin-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+    .admin-form-group { margin-bottom: 1rem; }
+    .admin-form-group label { font-size: 0.7rem; color: rgba(255,255,255,0.45); letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 6px; }
+    .admin-form-group input, .admin-form-group textarea, .admin-form-group select { width: 100%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; padding: 0.65rem 0.8rem; font-size: 0.88rem; color: white; font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s; }
+    .admin-form-group input:focus, .admin-form-group textarea:focus, .admin-form-group select:focus { border-color: var(--glass-blue); }
+    .admin-form-group textarea { resize: vertical; min-height: 70px; }
+    .admin-form-group select option { background: #1C2B3A; }
+
+    /* Image upload */
+    .img-upload-zone { border: 2px dashed rgba(93,184,212,0.3); border-radius: 6px; padding: 2rem; text-align: center; cursor: pointer; transition: border-color 0.2s; position: relative; }
+    .img-upload-zone:hover { border-color: rgba(93,184,212,0.6); }
+    .img-upload-zone.drag-over { border-color: var(--glass-blue); background: rgba(93,184,212,0.06); }
+    .img-upload-zone input[type=file] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
+    .img-upload-zone svg { width: 36px; height: 36px; stroke: rgba(93,184,212,0.5); stroke-width: 1.5; fill: none; margin: 0 auto 0.75rem; display: block; }
+    .img-upload-zone p { font-size: 0.85rem; color: rgba(255,255,255,0.4); }
+    .img-upload-zone p span { color: var(--glass-blue); font-weight: 500; }
+    .img-upload-zone .img-preview { width: 100%; max-height: 200px; object-fit: cover; border-radius: 4px; display: none; }
+    .img-upload-zone.has-image .img-preview { display: block; }
+    .img-upload-zone.has-image svg, .img-upload-zone.has-image p { display: none; }
+
+    .add-btn { background: var(--glass-blue); color: var(--steel); border: none; border-radius: 4px; padding: 0.75rem 2rem; font-family: 'Rajdhani', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.5px; cursor: pointer; transition: background 0.2s; }
+    .add-btn:hover { background: var(--gold); color: white; }
+    .add-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+    /* Projects list */
+    .admin-posts-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+    .admin-posts-header h3 { font-family: 'Rajdhani', sans-serif; font-size: 1.1rem; color: white; }
+    .admin-posts-header span { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+    #admin-posts-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    .admin-post-item { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 1rem 1.25rem; display: flex; align-items: center; gap: 1rem; }
+    .admin-post-thumb { width: 72px; height: 52px; border-radius: 4px; object-fit: cover; background: rgba(255,255,255,0.06); flex-shrink: 0; }
+    .admin-post-thumb-ph { width: 72px; height: 52px; border-radius: 4px; background: rgba(255,255,255,0.06); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+    .admin-post-thumb-ph svg { width: 20px; height: 20px; stroke: rgba(255,255,255,0.2); stroke-width: 1.5; fill: none; }
+    .admin-post-info { flex: 1; min-width: 0; }
+    .admin-post-info h4 { font-size: 0.9rem; color: white; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .admin-post-info p { font-size: 0.75rem; color: rgba(255,255,255,0.35); margin-top: 3px; }
+    .admin-post-cat { font-size: 0.65rem; background: rgba(93,184,212,0.15); color: var(--glass-blue); padding: 2px 8px; border-radius: 10px; }
+    .admin-post-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
+    .admin-del-btn { background: rgba(220,50,50,0.1); border: 1px solid rgba(220,50,50,0.2); color: #f87171; padding: 0.4rem 0.75rem; border-radius: 4px; font-size: 0.78rem; cursor: pointer; transition: background 0.2s; }
+    .admin-del-btn:hover { background: rgba(220,50,50,0.2); }
+    .admin-no-posts { text-align: center; padding: 2.5rem; color: rgba(255,255,255,0.25); font-size: 0.9rem; }
+
+    /* Login modal */
+    #admin-login { display: none; position: fixed; inset: 0; background: rgba(10,18,26,0.97); z-index: 1001; align-items: center; justify-content: center; }
+    #admin-login.open { display: flex; }
+    .login-box { background: var(--steel-light); border: 1px solid rgba(93,184,212,0.2); border-radius: 10px; padding: 2.5rem; width: 340px; text-align: center; }
+    .login-box h2 { font-family: 'Rajdhani', sans-serif; font-size: 1.5rem; color: white; margin-bottom: 0.4rem; }
+    .login-box p { font-size: 0.82rem; color: rgba(255,255,255,0.4); margin-bottom: 1.75rem; }
+    .login-box input { width: 100%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; padding: 0.7rem 0.9rem; font-size: 0.9rem; color: white; font-family: 'Inter', sans-serif; outline: none; text-align: center; letter-spacing: 3px; margin-bottom: 1rem; }
+    .login-box input:focus { border-color: var(--glass-blue); }
+    .login-btn { width: 100%; background: var(--glass-blue); color: var(--steel); border: none; border-radius: 4px; padding: 0.75rem; font-family: 'Rajdhani', sans-serif; font-size: 1rem; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+    .login-btn:hover { background: var(--gold); color: white; }
+    .login-error { color: #f87171; font-size: 0.8rem; margin-top: 0.75rem; display: none; }
+    .login-cancel { background: none; border: none; color: rgba(255,255,255,0.3); font-size: 0.8rem; margin-top: 1rem; cursor: pointer; }
+    .login-cancel:hover { color: rgba(255,255,255,0.6); }
+
+    /* Toast */
+    #toast { position: fixed; bottom: 6rem; right: 2rem; background: var(--steel); color: white; padding: 0.75rem 1.25rem; border-radius: 6px; font-size: 0.85rem; z-index: 2000; border-left: 3px solid var(--glass-blue); transform: translateY(20px); opacity: 0; transition: all 0.3s; pointer-events: none; }
+    #toast.show { transform: translateY(0); opacity: 1; }
+    #toast.success { border-left-color: #4ade80; }
+    #toast.error { border-left-color: #f87171; }
+
+    /* RESPONSIVE */
+    @media (max-width: 860px) {
+      .hero-right { display: none; }
+      .hero h1 { font-size: 2.8rem; }
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: var(--steel); padding: 1.5rem 2.5rem; gap: 1.25rem; border-top: 1px solid rgba(93,184,212,0.12); }
+      .why-grid { grid-template-columns: 1fr; }
+      .contact-inner { grid-template-columns: 1fr; }
+      #gallery-grid { grid-template-columns: 1fr 1fr; }
+      .g-item:first-child { grid-column: 1/3; }
+      .admin-form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .hero { padding: 3rem 1.5rem; }
+      .hero h1 { font-size: 2.3rem; }
+      .section { padding: 3.5rem 1.5rem; }
+      #gallery-grid { grid-template-columns: 1fr; }
+      .g-item:first-child { grid-column: 1; }
+      .stat { padding: 0 1.5rem; border-right: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <button id="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="">
+  <div id="lightbox-info">
+    <h3 id="lightbox-title"></h3>
+    <p id="lightbox-desc"></p>
+  </div>
+</div>
+
+<!-- ADMIN LOGIN -->
+<div id="admin-login">
+  <div class="login-box">
+    <h2>Admin Access</h2>
+    <p>Enter your password to manage the portfolio</p>
+    <input type="password" id="admin-pwd-input" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()">
+    <button class="login-btn" onclick="doLogin()">Sign In</button>
+    <div class="login-error" id="login-err">Incorrect password. Try again.</div>
+    <br>
+    <button class="login-cancel" onclick="closeLogin()">Cancel</button>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="admin-overlay">
+  <div class="admin-wrap">
+    <div class="admin-header">
+      <div>
+        <h2>Portfolio Manager</h2>
+        <p>Mumtaz Windoor — Add, view, and remove project photos</p>
+      </div>
+      <button class="admin-close" onclick="closeAdmin()">✕ Close Panel</button>
+    </div>
+
+    <!-- Add new post -->
+    <div class="add-post-form">
+      <h3>+ Add New Project</h3>
+      <div class="admin-form-row">
+        <div class="admin-form-group">
+          <label>Project Title *</label>
+          <input type="text" id="p-title" placeholder="e.g. Aluminium Windows — DHA Phase 5">
+        </div>
+        <div class="admin-form-group">
+          <label>Category *</label>
+          <select id="p-cat">
+            <option value="Aluminium Windows">Aluminium Windows</option>
+            <option value="Glass Doors">Glass Doors</option>
+            <option value="Shower Cabin">Shower Cabin</option>
+            <option value="Steel Railings">Steel Railings</option>
+            <option value="Glass Partition">Glass Partition</option>
+            <option value="Shop Front">Shop Front</option>
+            <option value="Wallpaper">Wallpaper / Glass Paper</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="admin-form-group">
+        <label>Short Description</label>
+        <textarea id="p-desc" placeholder="Brief note about this project — location, material, size..."></textarea>
+      </div>
+      <div class="admin-form-group">
+        <label>Photo *</label>
+        <div class="img-upload-zone" id="upload-zone">
+          <input type="file" accept="image/*" id="img-file-input" onchange="handleImageSelect(this)">
+          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          <p><span>Click to upload</span> or drag &amp; drop a photo<br><small style="color:rgba(255,255,255,0.25);font-size:0.72rem">JPG, PNG, WEBP — max 5MB</small></p>
+          <img class="img-preview" id="img-preview" src="" alt="">
+        </div>
+      </div>
+      <button class="add-btn" id="add-btn" onclick="addProject()">Add to Portfolio</button>
+    </div>
+
+    <!-- Projects list -->
+    <div class="admin-posts-header">
+      <h3>Current Portfolio</h3>
+      <span id="post-count">0 projects</span>
+    </div>
+    <div id="admin-posts-list"></div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">Mumtaz <span>Windoor</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Our Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <a href="#contact" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-panes"><div class="pane"></div><div class="pane"></div><div class="pane"></div><div class="pane"></div><div class="pane"></div></div>
+  <div class="hero-content">
+    <div class="eyebrow">Lahore's Trusted Glazing Specialists</div>
+    <h1>Crafted in <em>Glass</em> &amp; Aluminium</h1>
+    <p>From precision-fitted aluminium windows to bespoke shower cabins and stainless steel railings — Mumtaz Windoor delivers lasting quality to homes and businesses across Lahore.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Request a Free Quote</a>
+      <a href="#work" class="btn-outline">View Our Work</a>
+    </div>
+  </div>
+  <div class="hero-right" aria-hidden="true">
+    <div class="hero-img-box" id="hero-img-1">
+      <div class="img-ph"><svg viewBox="0 0 40 40" fill="none" stroke="white" stroke-width="1.5"><rect x="4" y="4" width="32" height="32" rx="2"/><line x1="4" y1="20" x2="36" y2="20"/><line x1="20" y1="4" x2="20" y2="36"/></svg><span>ADD PHOTOS VIA ADMIN</span></div>
+    </div>
+    <div class="hero-img-box" id="hero-img-2">
+      <div class="img-ph"><svg viewBox="0 0 40 40" fill="none" stroke="white" stroke-width="1.5"><path d="M8 4h24v32H8z"/><path d="M8 20h24"/></svg><span>GLASS DOORS</span></div>
+    </div>
+    <div class="hero-img-box" id="hero-img-3">
+      <div class="img-ph"><svg viewBox="0 0 40 40" fill="none" stroke="white" stroke-width="1.5"><path d="M10 10c0 0 4 4 10 4s10-4 10-4v16c0 0-4 4-10 4s-10-4-10-4z"/></svg><span>SHOWER CABINS</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><div class="stat-num">500<span>+</span></div><div class="stat-label">Projects Completed</div></div>
+  <div class="stat"><div class="stat-num">5<span>.0</span></div><div class="stat-label">Google Rating</div></div>
+  <div class="stat"><div class="stat-num">10<span>+</span></div><div class="stat-label">Years Experience</div></div>
+  <div class="stat"><div class="stat-num">24<span>hr</span></div><div class="stat-label">Quote Turnaround</div></div>
+</div>
+
+<!-- SERVICES -->
+<section class="section services-bg" id="services">
+  <div class="section-inner">
+    <div class="sec-label" style="color:rgba(184,224,236,0.8)">What We Do</div>
+    <div class="sec-title" style="color:#fff">Our Services</div>
+    <div class="sec-sub" style="color:rgba(255,255,255,0.48)">Specialists in aluminium fabrication, glass installation, and interior finishes — all under one roof.</div>
+    <div class="services-grid">
+      <div class="service-card"><div class="gold-line"></div><div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="1"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/></svg></div><h3>Aluminium Windows</h3><p>Custom-fabricated frames with precision sealing and weather resistance for residential and commercial properties.</p></div>
+      <div class="service-card"><div class="gold-line"></div><div class="service-icon"><svg viewBox="0 0 24 24"><rect x="3" y="2" width="18" height="22" rx="1"/><line x1="12" y1="2" x2="12" y2="24"/></svg></div><h3>Glass Doors</h3><p>Frameless and framed glass doors — elegant solutions for offices, storefronts, and homes.</p></div>
+      <div class="service-card"><div class="gold-line"></div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 4l4 4M20 4l-4 4M4 20l4-4M20 20l-4-4"/></svg></div><h3>Shower Cabins</h3><p>Bespoke shower enclosures with tempered safety glass, custom sizing, and premium hardware finishes.</p></div>
+      <div class="service-card"><div class="gold-line"></div><div class="service-icon"><svg viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></div><h3>Stainless Steel Railings</h3><p>Staircase, balcony, and balustrade railings fabricated and installed to exact specifications.</p></div>
+      <div class="service-card"><div class="gold-line"></div><div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="M2 8h20M2 12h20M2 16h20"/></svg></div><h3>Wallpaper &amp; Glass Paper</h3><p>Interior wall finishing with quality wallpapers and decorative glass films for privacy and style.</p></div>
+      <div class="service-card"><div class="gold-line" style="background:var(--gold)"></div><div class="service-icon" style="background:rgba(201,168,76,0.1);border-color:rgba(201,168,76,0.22)"><svg viewBox="0 0 24 24" style="stroke:var(--gold)"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>Residential &amp; Commercial</h3><p>All project scales — from a single window to a complete commercial fit-out across Lahore.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section work-section" id="work">
+  <div class="section-inner">
+    <div class="sec-label">Portfolio</div>
+    <div class="sec-title">Our Work</div>
+    <div class="sec-sub">Every project reflects our craftsmanship. Photos added by the owner from real completed projects.</div>
+    <div id="gallery-grid">
+      <div class="gallery-empty" id="gallery-empty">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#ccc" stroke-width="1.5" width="48" height="48" style="margin:0 auto 1rem;display:block"><rect x="4" y="8" width="40" height="32" rx="3"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 8 8 6-6 16 12"/></svg>
+        No photos yet — add your first project in the admin panel.
+      </div>
+    </div>
+    <div class="gallery-cta"><a href="#contact">Discuss Your Project →</a></div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section why-section" id="about">
+  <div class="section-inner">
+    <div class="sec-label">Why Choose Us</div>
+    <div class="sec-title">Quality You Can See Through</div>
+    <div class="sec-sub">Trusted by homeowners and businesses across Lahore for over a decade.</div>
+    <div class="why-grid">
+      <div class="why-card"><h4>Precision Fabrication</h4><p>All aluminium profiles are cut and welded in-house, ensuring exact measurements and watertight seals on every installation.</p></div>
+      <div class="why-card"><h4>5-Star Rated on Google</h4><p>A perfect 5.0 rating across all Google reviews — our reputation is built on referrals and repeat clients, not advertising.</p></div>
+      <div class="why-card"><h4>One-Stop Shop</h4><p>Windows, doors, railings, wallpaper — one team handles everything. No coordination headaches between contractors.</p></div>
+      <div class="why-card"><h4>Lahore-Based Specialists</h4><p>We know local buildings and the local climate. Our installs are designed to perform through Lahore's summers and winters.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEW -->
+<div class="review-strip">
+  <div class="stars">★ ★ ★ ★ ★</div>
+  <div class="review-text">"Specialist work done right — aluminium windows fitted perfectly, sealed clean, finished beautifully."</div>
+  <div class="review-author">Verified Google Customer · Lahore</div>
+  <a href="https://www.google.com/search?q=Mumtaz+Windoor+Aluminium+%26+Glass+works+Reviews" target="_blank" rel="noopener" class="review-badge">
+    <div class="g-dot"></div>5.0 · 6 Google Reviews — Read all reviews
+  </a>
+</div>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <h3>Let's Build Something Together</h3>
+      <div class="contact-row"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91A16 16 0 0 0 15 15.91l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><p>Call / WhatsApp</p><strong><a href="tel:03214526029">0321 4526029</a></strong></div></div>
+      <div class="contact-row"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><p>Address</p><strong>Peer Qolony Abu Baker Street, 1 Walton Rd,<br>Qadri Colony, Lahore 54000</strong></div></div>
+      <div class="contact-row"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><div><p>Located In</p><strong>Mianmeer Hardware Shop</strong></div></div>
+      <div class="contact-row"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div><p>Opening Hours</p><strong>Open daily · Closes 10:00 PM</strong></div></div>
+    </div>
+    <div class="contact-form">
+      <h4>Request a Free Quote</h4>
+      <form onsubmit="handleSubmit(event)">
+        <div class="form-group"><label for="c-name">Your Name</label><input type="text" id="c-name" placeholder="Muhammad Ali" required></div>
+        <div class="form-group"><label for="c-phone">Phone Number</label><input type="tel" id="c-phone" placeholder="03XX XXXXXXX" required></div>
+        <div class="form-group"><label for="c-service">Service Needed</label>
+          <select id="c-service"><option>Aluminium Windows</option><option>Glass Doors</option><option>Shower Cabin</option><option>Stainless Steel Railings</option><option>Wallpaper / Glass Paper</option><option>Multiple Services</option><option>Other / Not Sure</option></select>
+        </div>
+        <div class="form-group"><label for="c-details">Project Details</label><textarea id="c-details" placeholder="Describe your project — dimensions, location, or any other details..."></textarea></div>
+        <button type="submit" class="submit-btn">Send Quote Request →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<div class="map-section">
+  <div class="map-bar">
+    <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    <p>Peer Qolony Abu Baker Street, 1 Walton Rd, Qadri Colony, Lahore &nbsp;·&nbsp;
+      <a href="https://maps.google.com/?q=Mumtaz+Windoor+Aluminium+Glass+Works+Lahore+Walton+Road" target="_blank" rel="noopener">Open in Google Maps →</a>
+    </p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="logo">Mumtaz <span>Windoor</span></a>
+      <p>Specialists in aluminium windows, glass doors, shower cabins, steel railings, and wallpaper. Serving Lahore for over a decade.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="#services">Aluminium Windows</a></li>
+        <li><a href="#services">Glass Doors</a></li>
+        <li><a href="#services">Shower Cabins</a></li>
+        <li><a href="#services">Steel Railings</a></li>
+        <li><a href="#services">Wallpaper &amp; Glass Paper</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="tel:03214526029">0321 4526029</a></li>
+        <li><a href="https://wa.me/923214526029" target="_blank">WhatsApp Us</a></li>
+        <li><a href="https://maps.google.com/?q=Mumtaz+Windoor+Aluminium+Lahore" target="_blank">Find on Maps</a></li>
+        <li><a href="https://www.google.com/search?q=Mumtaz+Windoor+Aluminium+%26+Glass+works+Reviews" target="_blank">Google Reviews</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Mumtaz Windoor Aluminium &amp; Glass Works · Lahore, Pakistan</p>
+    <a href="#" class="admin-link-footer" onclick="event.preventDefault();openLogin()">Admin</a>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/923214526029" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+// ── STORAGE KEY & PASSWORD ──
+const STORAGE_KEY = 'mw_portfolio_v1';
+const ADMIN_PASSWORD = 'mumtaz2024'; // Change this password!
+
+// ── DATA ──
+function getProjects() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); } catch(e) { return []; }
+}
+function saveProjects(arr) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
+}
+
+// ── GALLERY RENDER ──
+function renderGallery() {
+  const projects = getProjects();
+  const grid = document.getElementById('gallery-grid');
+  const empty = document.getElementById('gallery-empty');
+  const existing = grid.querySelectorAll('.g-item');
+  existing.forEach(e => e.remove());
+
+  if (projects.length === 0) {
+    empty.style.display = 'block';
+    return;
+  }
+  empty.style.display = 'none';
+
+  projects.forEach((p, i) => {
+    const item = document.createElement('div');
+    item.className = 'g-item';
+    const thumbInner = p.image
+      ? `<img src="${p.image}" alt="${p.title}" loading="lazy">`
+      : `<div class="g-ph"><svg viewBox="0 0 48 48" fill="none" stroke="#999" stroke-width="1.5"><rect x="4" y="8" width="40" height="32" rx="3"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 8 8 6-6 16 12"/></svg><span>${p.category}</span></div>`;
+    item.innerHTML = `
+      <div class="g-thumb">
+        ${thumbInner}
+        <div class="g-label">
+          <div class="g-cat-badge">${p.category}</div><br>
+          ${p.title}
+        </div>
+      </div>`;
+    if (p.image) {
+      item.onclick = () => openLightbox(p.image, p.title, p.description || p.category);
+    }
+    grid.appendChild(item);
+  });
+
+  // Update hero images with first 3 project images
+  const withImages = projects.filter(p => p.image);
+  ['hero-img-1','hero-img-2','hero-img-3'].forEach((id, idx) => {
+    const box = document.getElementById(id);
+    if (!box) return;
+    if (withImages[idx]) {
+      box.innerHTML = `<img src="${withImages[idx].image}" alt="${withImages[idx].title}" style="width:100%;height:100%;object-fit:cover">`;
+    }
+  });
+}
+
+// ── LIGHTBOX ──
+function openLightbox(src, title, desc) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox-title').textContent = title;
+  document.getElementById('lightbox-desc').textContent = desc || '';
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('lightbox').addEventListener('click', function(e) {
+  if (e.target === this) closeLightbox();
+});
+
+// ── IMAGE UPLOAD ──
+let currentImageData = null;
+function handleImageSelect(input) {
+  const file = input.files[0];
+  if (!file) return;
+  if (file.size > 5 * 1024 * 1024) { showToast('Image must be under 5MB', 'error'); return; }
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    currentImageData = e.target.result;
+    const preview = document.getElementById('img-preview');
+    preview.src = currentImageData;
+    document.getElementById('upload-zone').classList.add('has-image');
+  };
+  reader.readAsDataURL(file);
+}
+
+// Drag & drop
+const zone = document.getElementById('upload-zone');
+zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag-over'); });
+zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
+zone.addEventListener('drop', e => {
+  e.preventDefault();
+  zone.classList.remove('drag-over');
+  const file = e.dataTransfer.files[0];
+  if (file && file.type.startsWith('image/')) {
+    const dt = new DataTransfer();
+    dt.items.add(file);
+    document.getElementById('img-file-input').files = dt.files;
+    handleImageSelect(document.getElementById('img-file-input'));
+  }
+});
+
+// ── ADD PROJECT ──
+function addProject() {
+  const title = document.getElementById('p-title').value.trim();
+  const cat = document.getElementById('p-cat').value;
+  const desc = document.getElementById('p-desc').value.trim();
+
+  if (!title) { showToast('Please enter a project title', 'error'); return; }
+  if (!currentImageData) { showToast('Please upload a photo', 'error'); return; }
+
+  const btn = document.getElementById('add-btn');
+  btn.disabled = true;
+  btn.textContent = 'Saving...';
+
+  const projects = getProjects();
+  projects.unshift({ id: Date.now(), title, category: cat, description: desc, image: currentImageData, date: new Date().toISOString() });
+  saveProjects(projects);
+
+  // Reset form
+  document.getElementById('p-title').value = '';
+  document.getElementById('p-desc').value = '';
+  document.getElementById('img-file-input').value = '';
+  document.getElementById('img-preview').src = '';
+  document.getElementById('upload-zone').classList.remove('has-image');
+  currentImageData = null;
+  btn.disabled = false;
+  btn.textContent = 'Add to Portfolio';
+
+  renderGallery();
+  renderAdminList();
+  showToast('Project added to portfolio!', 'success');
+}
+
+// ── DELETE PROJECT ──
+function deleteProject(id) {
+  if (!confirm('Remove this project from the portfolio?')) return;
+  const projects = getProjects().filter(p => p.id !== id);
+  saveProjects(projects);
+  renderGallery();
+  renderAdminList();
+  showToast('Project removed');
+}
+
+// ── ADMIN LIST RENDER ──
+function renderAdminList() {
+  const projects = getProjects();
+  const list = document.getElementById('admin-posts-list');
+  const countEl = document.getElementById('post-count');
+  countEl.textContent = `${projects.length} project${projects.length !== 1 ? 's' : ''}`;
+  list.innerHTML = '';
+  if (projects.length === 0) {
+    list.innerHTML = '<div class="admin-no-posts">No projects yet. Add your first one above.</div>';
+    return;
+  }
+  projects.forEach(p => {
+    const item = document.createElement('div');
+    item.className = 'admin-post-item';
+    const thumbHtml = p.image
+      ? `<img class="admin-post-thumb" src="${p.image}" alt="${p.title}">`
+      : `<div class="admin-post-thumb-ph"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M2 17l5-5 4 4 3-3 7 7"/></svg></div>`;
+    item.innerHTML = `
+      ${thumbHtml}
+      <div class="admin-post-info">
+        <h4>${p.title}</h4>
+        <p><span class="admin-post-cat">${p.category}</span> &nbsp;${p.description ? '· ' + p.description.substring(0,50) + (p.description.length>50?'…':'') : ''}</p>
+      </div>
+      <div class="admin-post-actions">
+        <button class="admin-del-btn" onclick="deleteProject(${p.id})">Remove</button>
+      </div>`;
+    list.appendChild(item);
+  });
+}
+
+// ── LOGIN ──
+function openLogin() {
+  document.getElementById('admin-login').classList.add('open');
+  document.getElementById('admin-pwd-input').value = '';
+  document.getElementById('login-err').style.display = 'none';
+  setTimeout(() => document.getElementById('admin-pwd-input').focus(), 100);
+}
+function closeLogin() {
+  document.getElementById('admin-login').classList.remove('open');
+}
+function doLogin() {
+  const pwd = document.getElementById('admin-pwd-input').value;
+  if (pwd === ADMIN_PASSWORD) {
+    closeLogin();
+    openAdmin();
+  } else {
+    document.getElementById('login-err').style.display = 'block';
+    document.getElementById('admin-pwd-input').value = '';
+    document.getElementById('admin-pwd-input').focus();
+  }
+}
+
+// ── ADMIN OPEN/CLOSE ──
+function openAdmin() {
+  renderAdminList();
+  document.getElementById('admin-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeAdmin() {
+  document.getElementById('admin-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ── TOAST ──
+function showToast(msg, type='') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'show ' + type;
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => t.className = '', 3000);
+}
+
+// ── CONTACT FORM ──
+function handleSubmit(e) {
+  e.preventDefault();
+  const name = document.getElementById('c-name').value.trim();
+  const phone = document.getElementById('c-phone').value.trim();
+  const service = document.getElementById('c-service').value;
+  const details = document.getElementById('c-details').value.trim();
+  const msg = encodeURIComponent(`Assalamu Alaikum!\n\nI'd like to request a quote.\n\nName: ${name}\nPhone: ${phone}\nService: ${service}\nDetails: ${details || 'N/A'}`);
+  window.open(`https://wa.me/923214526029?text=${msg}`, '_blank');
+}
+
+// ── NAV ──
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+// Keyboard shortcuts
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    closeLightbox();
+    closeAdmin();
+    closeLogin();
+    document.body.style.overflow = '';
+  }
+});
+
+// ── INIT ──
+renderGallery();
+</script>
+</body>
+</html>
