@@ -1,295 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mumtaz Windoor Aluminium & Glass Works — Specialists in aluminium windows, glass doors, shower cabins, stainless steel railings, wallpaper and glass papers. Lahore, Pakistan.">
-  <title>Mumtaz Windoor Aluminium & Glass Works | Lahore</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --steel: #1C2B3A; --steel-light: #2A3F52; --steel-mid: #334E63;
-      --glass-blue: #5DB8D4; --glass-pale: #B8E0EC;
-      --gold: #C9A84C; --cream: #F5F0E8; --white: #FFFFFF;
-      --text-dark: #0F1A24; --text-mid: #4A6070;
-    }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text-dark); overflow-x: hidden; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mumtaz Windoor Aluminium & Glass Works — Specialists in aluminium windows, glass doors, shower cabins, stainless steel railings and wallpaper. Lahore, Pakistan.">
+<title>Mumtaz Windoor | Aluminium & Glass Works Lahore</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg-page:#070C14;
+  --bg-1:#0C1522;
+  --bg-2:#111E30;
+  --bg-glass:rgba(255,255,255,0.03);
+  --border:rgba(255,255,255,0.07);
+  --border-bright:rgba(91,189,212,0.22);
+  --border-gold:rgba(201,168,76,0.18);
+  --text-1:#E2EAF0;
+  --text-2:rgba(226,234,240,0.55);
+  --text-3:rgba(226,234,240,0.28);
+  --accent:#5BBDD4;
+  --accent-glow:rgba(91,189,212,0.1);
+  --gold:#C9A84C;
+  --gold-glow:rgba(201,168,76,0.1);
+  --danger:#f87171;
+  --r:8px;--rl:14px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg-page);color:var(--text-1);overflow-x:hidden;min-height:100vh}
 
-    /* ── NAV ── */
-    nav { background: var(--steel); padding: 1rem 2.5rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
-    .logo { font-family: 'Rajdhani', sans-serif; font-size: 1.45rem; font-weight: 700; color: var(--white); text-decoration: none; }
-    .logo span { color: var(--glass-blue); }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { color: rgba(255,255,255,0.7); font-size: 0.85rem; text-decoration: none; letter-spacing: 0.4px; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--glass-blue); }
-    .nav-cta { background: var(--glass-blue); color: var(--steel); font-weight: 700; font-size: 0.85rem; padding: 0.55rem 1.4rem; border-radius: 4px; text-decoration: none; font-family: 'Rajdhani', sans-serif; transition: background 0.2s; }
-    .nav-cta:hover { background: var(--gold); color: var(--white); }
-    .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
-    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; }
+/* SCROLLBAR */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg-page)}
+::-webkit-scrollbar-thumb{background:rgba(91,189,212,0.3);border-radius:2px}
 
-    /* ── HERO ── */
-    .hero { background: var(--steel); min-height: 560px; display: flex; align-items: center; position: relative; overflow: hidden; padding: 4rem 2.5rem; }
-    .hero-bg-panes { position: absolute; inset: 0; display: flex; pointer-events: none; }
-    .pane { flex: 1; border-right: 1px solid rgba(93,184,212,0.10); }
-    .pane:nth-child(2) { background: rgba(93,184,212,0.025); }
-    .pane:nth-child(5) { background: rgba(201,168,76,0.03); }
-    .hero-content { position: relative; z-index: 2; max-width: 560px; }
-    .eyebrow { font-size: 0.72rem; letter-spacing: 3px; color: var(--glass-blue); text-transform: uppercase; margin-bottom: 1.2rem; font-weight: 500; }
-    .hero h1 { font-family: 'Rajdhani', sans-serif; font-size: 3.8rem; font-weight: 700; color: var(--white); line-height: 1.05; margin-bottom: 1.2rem; }
-    .hero h1 em { color: var(--glass-blue); font-style: normal; }
-    .hero p { font-size: 1rem; color: rgba(255,255,255,0.6); line-height: 1.75; max-width: 440px; font-weight: 300; margin-bottom: 2rem; }
-    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .btn-primary { background: var(--glass-blue); color: var(--steel); font-weight: 700; font-size: 0.95rem; padding: 0.8rem 1.9rem; border-radius: 4px; text-decoration: none; font-family: 'Rajdhani', sans-serif; transition: background 0.2s; display: inline-block; }
-    .btn-primary:hover { background: var(--gold); color: var(--white); }
-    .btn-outline { border: 1.5px solid rgba(93,184,212,0.45); color: var(--glass-pale); font-size: 0.95rem; padding: 0.8rem 1.9rem; border-radius: 4px; text-decoration: none; display: inline-block; transition: border-color 0.2s; }
-    .btn-outline:hover { border-color: var(--glass-blue); color: var(--white); }
-    .hero-right { position: absolute; right: 2.5rem; top: 50%; transform: translateY(-50%); width: 360px; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
-    .hero-img-box { background: var(--steel-light); border: 1px solid rgba(93,184,212,0.15); border-radius: 3px; overflow: hidden; }
-    .hero-img-box:nth-child(1) { grid-column: 1 / 3; }
-    .hero-img-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .hero-img-box:nth-child(1) { height: 170px; }
-    .hero-img-box:nth-child(2), .hero-img-box:nth-child(3) { height: 110px; }
-    .img-ph { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 1rem; }
-    .img-ph svg { width: 32px; height: 32px; opacity: 0.28; }
-    .img-ph span { font-size: 0.6rem; color: rgba(255,255,255,0.28); letter-spacing: 1.5px; text-align: center; }
+/* ── NAV ── */
+nav{background:rgba(7,12,20,0.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;height:64px}
+.logo{font-family:'Rajdhani',sans-serif;font-size:1.35rem;font-weight:700;color:var(--text-1);text-decoration:none;letter-spacing:.3px}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--text-2);font-size:.83rem;text-decoration:none;letter-spacing:.3px;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:#070C14;font-weight:600;font-size:.83rem;padding:.5rem 1.25rem;border-radius:var(--r);text-decoration:none;font-family:'Rajdhani',sans-serif;letter-spacing:.5px;transition:all .2s}
+.nav-cta:hover{background:#fff;color:#070C14}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-toggle span{display:block;width:22px;height:1.5px;background:var(--text-1);border-radius:2px;transition:all .3s}
 
-    /* ── STATS ── */
-    .stats { background: var(--cream); padding: 1.6rem 2.5rem; display: flex; justify-content: center; border-bottom: 2px solid var(--steel); flex-wrap: wrap; gap: 1rem; }
-    .stat { text-align: center; padding: 0 3rem; border-right: 1px solid rgba(28,43,58,0.15); }
-    .stat:last-child { border-right: none; }
-    .stat-num { font-family: 'Rajdhani', sans-serif; font-size: 2.4rem; font-weight: 700; color: var(--steel); line-height: 1; }
-    .stat-num span { color: var(--glass-blue); }
-    .stat-label { font-size: 0.7rem; color: var(--text-mid); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 4px; }
+/* ── HERO ── */
+.hero{min-height:calc(100vh - 64px);display:flex;align-items:center;position:relative;overflow:hidden;padding:5rem 2.5rem}
+.hero-grid{position:absolute;inset:0;background-image:radial-gradient(rgba(91,189,212,0.06) 1px,transparent 1px);background-size:32px 32px;pointer-events:none}
+.hero-glow{position:absolute;top:-200px;right:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(91,189,212,0.07) 0%,transparent 65%);pointer-events:none}
+.hero-glow2{position:absolute;bottom:-300px;left:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(201,168,76,0.05) 0%,transparent 65%);pointer-events:none}
+.hero-content{position:relative;z-index:2;max-width:640px}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(91,189,212,0.08);border:1px solid rgba(91,189,212,0.18);border-radius:20px;padding:.35rem 1rem;font-size:.72rem;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:1.75rem}
+.hero-badge span{width:6px;height:6px;border-radius:50%;background:var(--accent);display:block;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-family:'Rajdhani',sans-serif;font-size:4.5rem;font-weight:700;color:var(--text-1);line-height:1;margin-bottom:1.5rem;letter-spacing:-1px}
+.hero h1 em{color:var(--accent);font-style:normal}
+.hero h1 .g{color:var(--gold)}
+.hero p{font-size:1.05rem;color:var(--text-2);line-height:1.8;max-width:480px;font-weight:300;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--accent);color:#070C14;font-weight:700;font-size:.9rem;padding:.85rem 2rem;border-radius:var(--r);text-decoration:none;font-family:'Rajdhani',sans-serif;letter-spacing:.5px;transition:all .2s;display:inline-flex;align-items:center;gap:6px}
+.btn-primary:hover{background:#fff;transform:translateY(-1px)}
+.btn-ghost{border:1px solid var(--border-bright);color:var(--accent);font-size:.9rem;padding:.85rem 2rem;border-radius:var(--r);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:all .2s}
+.btn-ghost:hover{background:var(--accent-glow);border-color:var(--accent)}
+.hero-visual{position:absolute;right:2.5rem;top:50%;transform:translateY(-50%);width:420px}
+.hero-img-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:220px 140px;gap:6px}
+.hero-img-cell{border-radius:var(--r);overflow:hidden;background:var(--bg-1);border:1px solid var(--border);position:relative}
+.hero-img-cell:first-child{grid-column:1/3;grid-row:1}
+.hero-img-cell img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-img-ph{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+.hero-img-ph svg{width:28px;height:28px;stroke:var(--text-3);stroke-width:1.5;fill:none}
+.hero-img-ph span{font-size:.6rem;color:var(--text-3);letter-spacing:2px;text-transform:uppercase}
+.hero-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(7,12,20,.6),transparent 50%)}
 
-    /* ── SECTIONS ── */
-    .section { padding: 5rem 2.5rem; }
-    .section-inner { max-width: 940px; margin: 0 auto; }
-    .sec-label { font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; color: var(--glass-blue); font-weight: 600; margin-bottom: 0.6rem; }
-    .sec-title { font-family: 'Rajdhani', sans-serif; font-size: 2.3rem; font-weight: 700; color: var(--steel); line-height: 1.1; margin-bottom: 0.6rem; }
-    .sec-sub { font-size: 0.95rem; color: var(--text-mid); line-height: 1.75; max-width: 520px; font-weight: 300; }
+/* ── STATS ── */
+.stats{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:2rem 2.5rem;display:flex;justify-content:center;flex-wrap:wrap}
+.stat{text-align:center;padding:0 3.5rem;border-right:1px solid var(--border)}
+.stat:last-child{border-right:none}
+.stat-num{font-family:'Rajdhani',sans-serif;font-size:2.8rem;font-weight:700;color:var(--text-1);line-height:1;background:linear-gradient(135deg,var(--text-1),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-label{font-size:.68rem;color:var(--text-3);letter-spacing:2px;text-transform:uppercase;margin-top:5px}
 
-    /* ── SERVICES ── */
-    .services-bg { background: var(--steel); }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 1px; background: rgba(93,184,212,0.08); margin-top: 2.5rem; }
-    .service-card { background: var(--steel-light); padding: 1.9rem 1.6rem; border: 1px solid rgba(93,184,212,0.07); transition: background 0.2s; }
-    .service-card:hover { background: var(--steel-mid); }
-    .service-icon { width: 46px; height: 46px; border-radius: 6px; background: rgba(93,184,212,0.1); border: 1px solid rgba(93,184,212,0.18); display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; }
-    .service-icon svg { width: 22px; height: 22px; stroke: var(--glass-blue); stroke-width: 1.5; fill: none; }
-    .gold-line { width: 26px; height: 2px; background: var(--gold); margin-bottom: 1.1rem; }
-    .service-card h3 { font-family: 'Rajdhani', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--white); margin-bottom: 0.45rem; }
-    .service-card p { font-size: 0.82rem; color: rgba(255,255,255,0.48); line-height: 1.65; font-weight: 300; }
+/* ── SECTION BASE ── */
+.section{padding:6rem 2.5rem}
+.sec-inner{max-width:1000px;margin:0 auto}
+.sec-tag{font-size:.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:.75rem}
+.sec-title{font-family:'Rajdhani',sans-serif;font-size:2.6rem;font-weight:700;color:var(--text-1);line-height:1.05;margin-bottom:.75rem}
+.sec-sub{font-size:.97rem;color:var(--text-2);line-height:1.8;max-width:500px;font-weight:300}
 
-    /* ── GALLERY ── */
-    .work-section { background: var(--white); }
-    #gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 2.5rem; }
-    .g-item { border-radius: 4px; overflow: hidden; position: relative; cursor: pointer; }
-    .g-item:first-child { grid-column: 1 / 3; }
-    .g-thumb { width: 100%; padding-top: 68%; position: relative; background: var(--cream); border: 1px solid rgba(28,43,58,0.07); border-radius: 4px; overflow: hidden; }
-    .g-item:first-child .g-thumb { padding-top: 55%; }
-    .g-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-    .g-thumb .g-ph { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; }
-    .g-ph svg { width: 32px; height: 32px; opacity: 0.2; }
-    .g-ph span { font-size: 0.62rem; color: var(--text-mid); letter-spacing: 1px; text-align: center; padding: 0 1rem; }
-    .g-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(15,26,36,0.82), transparent); padding: 1.25rem 0.9rem 0.6rem; color: var(--white); font-size: 0.78rem; }
-    .g-cat-badge { display: inline-block; background: rgba(93,184,212,0.25); color: var(--glass-pale); font-size: 0.65rem; padding: 2px 8px; border-radius: 10px; margin-bottom: 4px; letter-spacing: 0.5px; }
-    .gallery-empty { text-align: center; padding: 3rem; color: var(--text-mid); font-size: 0.9rem; grid-column: 1/-1; }
-    .gallery-cta { text-align: center; margin-top: 2rem; }
-    .gallery-cta a { border: 1.5px solid rgba(28,43,58,0.18); color: var(--steel); padding: 0.75rem 2.25rem; border-radius: 4px; font-family: 'Rajdhani', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 1px; text-decoration: none; display: inline-block; transition: all 0.2s; }
-    .gallery-cta a:hover { background: var(--steel); color: var(--white); border-color: var(--steel); }
+/* ── SERVICES ── */
+.services-section{background:var(--bg-page)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:3rem;border-radius:var(--rl);overflow:hidden}
+.svc-card{background:var(--bg-1);padding:2rem;transition:background .25s;position:relative;overflow:hidden;cursor:default}
+.svc-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 0% 0%,var(--accent-glow),transparent 60%);opacity:0;transition:opacity .3s}
+.svc-card:hover{background:var(--bg-2)}
+.svc-card:hover::before{opacity:1}
+.svc-icon{width:44px;height:44px;border-radius:var(--r);background:var(--accent-glow);border:1px solid var(--border-bright);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;position:relative;z-index:1}
+.svc-icon svg{width:20px;height:20px;stroke:var(--accent);stroke-width:1.5;fill:none}
+.svc-bar{width:28px;height:2px;background:var(--gold);margin-bottom:1rem;position:relative;z-index:1}
+.svc-card h3{font-family:'Rajdhani',sans-serif;font-size:1.1rem;font-weight:700;color:var(--text-1);margin-bottom:.4rem;position:relative;z-index:1}
+.svc-card p{font-size:.82rem;color:var(--text-2);line-height:1.7;font-weight:300;position:relative;z-index:1}
 
-    /* ── LIGHTBOX ── */
-    #lightbox { display: none; position: fixed; inset: 0; background: rgba(10,18,26,0.93); z-index: 500; align-items: center; justify-content: center; padding: 2rem; }
-    #lightbox.open { display: flex; }
-    #lightbox img { max-width: 90vw; max-height: 85vh; object-fit: contain; border-radius: 4px; }
-    #lightbox-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: 1.5px solid rgba(255,255,255,0.3); color: white; font-size: 1.4rem; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; }
-    #lightbox-close:hover { background: rgba(255,255,255,0.1); }
-    #lightbox-info { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); text-align: center; }
-    #lightbox-info h3 { color: white; font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; }
-    #lightbox-info p { color: rgba(255,255,255,0.5); font-size: 0.82rem; margin-top: 4px; }
+/* ── PORTFOLIO ── */
+.portfolio-section{background:var(--bg-page);padding:6rem 2.5rem}
+.port-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3rem;flex-wrap:wrap;gap:1rem}
+#gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.g-item{border-radius:var(--r);overflow:hidden;cursor:pointer;position:relative;background:var(--bg-1);border:1px solid var(--border)}
+.g-item:first-child{grid-column:1/3}
+.g-thumb{width:100%;padding-top:65%;position:relative;overflow:hidden}
+.g-item:first-child .g-thumb{padding-top:52%}
+.g-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.g-item:hover .g-thumb img{transform:scale(1.04)}
+.g-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--bg-2)}
+.g-ph svg{width:30px;height:30px;stroke:var(--text-3);stroke-width:1.5;fill:none}
+.g-ph span{font-size:.62rem;color:var(--text-3);letter-spacing:1.5px;text-align:center;padding:0 1rem}
+.g-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(7,12,20,.9) 0%,rgba(7,12,20,.2) 50%,transparent 100%);opacity:0;transition:opacity .3s}
+.g-item:hover .g-overlay{opacity:1}
+.g-info{position:absolute;bottom:0;left:0;right:0;padding:1.25rem 1rem .75rem;transform:translateY(8px);transition:transform .3s;z-index:2}
+.g-item:hover .g-info{transform:translateY(0)}
+.g-cat{font-size:.62rem;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px}
+.g-title{font-size:.88rem;color:#fff;font-weight:500}
+.g-count{position:absolute;top:.75rem;right:.75rem;background:rgba(7,12,20,.7);backdrop-filter:blur(6px);border:1px solid var(--border);border-radius:20px;padding:.2rem .6rem;font-size:.65rem;color:var(--text-2);display:flex;align-items:center;gap:4px;z-index:3}
+.g-count svg{width:10px;height:10px;stroke:currentColor;stroke-width:2;fill:none}
+.gallery-empty{text-align:center;padding:5rem 2rem;color:var(--text-3);grid-column:1/-1;border:1px dashed var(--border);border-radius:var(--rl)}
+.gallery-empty svg{display:block;margin:0 auto 1rem}
 
-    /* ── WHY US ── */
-    .why-section { background: var(--cream); }
-    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
-    .why-card { background: var(--white); border: 1px solid rgba(28,43,58,0.07); border-radius: 8px; padding: 1.6rem; border-left: 3px solid var(--glass-blue); }
-    .why-card h4 { font-family: 'Rajdhani', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--steel); margin-bottom: 0.45rem; }
-    .why-card p { font-size: 0.83rem; color: var(--text-mid); line-height: 1.65; font-weight: 300; }
+/* ── PROJECT DETAIL PAGE ── */
+#page-detail{display:none;min-height:100vh;background:var(--bg-page)}
+.detail-back{display:inline-flex;align-items:center;gap:8px;color:var(--text-2);font-size:.85rem;text-decoration:none;padding:1.5rem 2.5rem;transition:color .2s;cursor:pointer;border:none;background:none}
+.detail-back:hover{color:var(--accent)}
+.detail-back svg{width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none}
 
-    /* ── REVIEW ── */
-    .review-strip { background: var(--steel); padding: 4rem 2.5rem; text-align: center; }
-    .stars { color: var(--gold); font-size: 1.25rem; margin-bottom: 1.1rem; letter-spacing: 4px; }
-    .review-text { font-family: 'Rajdhani', sans-serif; font-size: 1.6rem; font-weight: 400; color: var(--white); max-width: 580px; margin: 0 auto 0.85rem; line-height: 1.45; font-style: italic; }
-    .review-author { font-size: 0.78rem; color: rgba(255,255,255,0.42); letter-spacing: 2px; text-transform: uppercase; }
-    .review-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(93,184,212,0.09); border: 1px solid rgba(93,184,212,0.18); border-radius: 20px; padding: 0.35rem 1rem; margin-top: 1.3rem; font-size: 0.73rem; color: var(--glass-blue); letter-spacing: 1px; text-decoration: none; }
-    .g-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--glass-blue); flex-shrink: 0; }
+/* Carousel */
+.carousel-wrap{position:relative;background:#000;overflow:hidden}
+.carousel-track{display:flex;transition:transform .4s cubic-bezier(.25,.46,.45,.94)}
+.carousel-slide{min-width:100%;position:relative}
+.carousel-slide img{width:100%;height:65vh;object-fit:cover;display:block;opacity:.9}
+.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(7,12,20,.7);backdrop-filter:blur(8px);border:1px solid var(--border);color:#fff;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;transition:all .2s}
+.carousel-btn:hover{background:var(--accent);border-color:var(--accent);color:#070C14}
+.carousel-btn svg{width:18px;height:18px;stroke:currentColor;stroke-width:2;fill:none}
+.carousel-prev{left:1.25rem}
+.carousel-next{right:1.25rem}
+.carousel-counter{position:absolute;bottom:1.25rem;right:1.25rem;background:rgba(7,12,20,.7);backdrop-filter:blur(6px);border:1px solid var(--border);border-radius:20px;padding:.3rem .9rem;font-size:.75rem;color:var(--text-2);z-index:10}
+.carousel-dots{display:flex;justify-content:center;gap:6px;padding:1rem 0 .5rem}
+.carousel-dot{width:6px;height:6px;border-radius:50%;background:var(--border-bright);border:none;cursor:pointer;padding:0;transition:all .2s}
+.carousel-dot.active{background:var(--accent);width:18px;border-radius:3px}
 
-    /* ── CONTACT ── */
-    .contact-section { background: var(--white); padding: 5rem 2.5rem; }
-    .contact-inner { max-width: 940px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; }
-    .contact-info h3 { font-family: 'Rajdhani', sans-serif; font-size: 2rem; font-weight: 700; color: var(--steel); margin-bottom: 1.75rem; line-height: 1.15; }
-    .contact-row { display: flex; align-items: flex-start; gap: 0.85rem; margin-bottom: 1.4rem; }
-    .contact-row svg { width: 18px; height: 18px; stroke: var(--glass-blue); stroke-width: 1.5; fill: none; flex-shrink: 0; margin-top: 3px; }
-    .contact-row div p { font-size: 0.7rem; color: var(--text-mid); text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 3px; }
-    .contact-row div strong { font-size: 0.92rem; color: var(--steel); font-weight: 500; line-height: 1.5; }
-    .contact-row div strong a { color: var(--steel); text-decoration: none; }
-    .contact-form { background: var(--cream); border-radius: 8px; padding: 2rem; border: 1px solid rgba(28,43,58,0.07); }
-    .contact-form h4 { font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--steel); margin-bottom: 1.4rem; }
-    .form-group { margin-bottom: 1.1rem; }
-    .form-group label { font-size: 0.7rem; color: var(--text-mid); letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 5px; }
-    .form-group input, .form-group textarea, .form-group select { width: 100%; background: var(--white); border: 1px solid rgba(28,43,58,0.12); border-radius: 4px; padding: 0.65rem 0.8rem; font-size: 0.88rem; color: var(--text-dark); font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s; appearance: none; -webkit-appearance: none; }
-    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--glass-blue); box-shadow: 0 0 0 3px rgba(93,184,212,0.12); }
-    .form-group textarea { resize: vertical; min-height: 90px; }
-    .submit-btn { width: 100%; background: var(--steel); color: var(--white); border: none; border-radius: 4px; padding: 0.85rem; font-family: 'Rajdhani', sans-serif; font-size: 1.05rem; font-weight: 700; letter-spacing: 1px; cursor: pointer; transition: background 0.2s; margin-top: 0.5rem; }
-    .submit-btn:hover { background: var(--glass-blue); color: var(--steel); }
+/* Thumbnail strip */
+.thumb-strip{display:flex;gap:6px;padding:.75rem 2.5rem;overflow-x:auto;background:var(--bg-1);border-bottom:1px solid var(--border)}
+.thumb-strip::-webkit-scrollbar{height:3px}
+.thumb-strip::-webkit-scrollbar-thumb{background:rgba(91,189,212,0.3)}
+.thumb-item{flex-shrink:0;width:80px;height:56px;border-radius:5px;overflow:hidden;cursor:pointer;border:2px solid transparent;transition:border-color .2s;position:relative}
+.thumb-item.active{border-color:var(--accent)}
+.thumb-item img{width:100%;height:100%;object-fit:cover;display:block}
 
-    /* ── MAP ── */
-    .map-section { background: var(--steel-light); }
-    .map-bar { max-width: 940px; margin: 0 auto; display: flex; align-items: center; padding: 1.75rem 2.5rem; gap: 1rem; }
-    .map-bar svg { width: 20px; height: 20px; stroke: var(--glass-blue); stroke-width: 1.5; fill: none; flex-shrink: 0; }
-    .map-bar p { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
-    .map-bar a { color: var(--glass-blue); text-decoration: none; }
-    .map-bar a:hover { text-decoration: underline; }
+/* Detail info */
+.detail-body{max-width:860px;margin:0 auto;padding:3rem 2.5rem}
+.detail-cat{font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem}
+.detail-title{font-family:'Rajdhani',sans-serif;font-size:3rem;font-weight:700;color:var(--text-1);line-height:1.05;margin-bottom:1.25rem}
+.detail-desc{font-size:1rem;color:var(--text-2);line-height:1.85;font-weight:300;max-width:600px;margin-bottom:2.5rem;border-left:2px solid var(--border-bright);padding-left:1.25rem}
+.detail-cta-bar{display:flex;align-items:center;gap:1rem;padding:2rem;background:var(--bg-1);border:1px solid var(--border);border-radius:var(--rl);margin-top:1rem;flex-wrap:wrap}
+.detail-cta-bar p{font-size:.92rem;color:var(--text-2);flex:1;min-width:200px}
+.detail-related{margin-top:4rem;padding-top:3rem;border-top:1px solid var(--border)}
+.detail-related h3{font-family:'Rajdhani',sans-serif;font-size:1.5rem;color:var(--text-1);margin-bottom:1.5rem}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.related-item{border-radius:var(--r);overflow:hidden;cursor:pointer;position:relative;aspect-ratio:4/3;background:var(--bg-1)}
+.related-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.related-item:hover img{transform:scale(1.05)}
+.related-label{position:absolute;bottom:0;left:0;right:0;padding:.75rem;background:linear-gradient(to top,rgba(7,12,20,.8),transparent);font-size:.78rem;color:#fff}
 
-    /* ── FOOTER ── */
-    footer { background: #0D1720; padding: 2.5rem 2.5rem 2rem; }
-    .footer-inner { max-width: 940px; margin: 0 auto; display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 2rem; }
-    .footer-brand .logo { font-size: 1.3rem; display: block; margin-bottom: 0.5rem; }
-    .footer-brand p { font-size: 0.78rem; color: rgba(255,255,255,0.3); line-height: 1.6; max-width: 240px; }
-    .footer-col h5 { font-family: 'Rajdhani', sans-serif; font-size: 0.78rem; font-weight: 700; color: var(--glass-pale); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.85rem; }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 0.5rem; }
-    .footer-col ul a { font-size: 0.82rem; color: rgba(255,255,255,0.38); text-decoration: none; transition: color 0.2s; }
-    .footer-col ul a:hover { color: var(--glass-blue); }
-    .footer-bottom { max-width: 940px; margin: 2rem auto 0; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
-    .footer-bottom p { font-size: 0.72rem; color: rgba(255,255,255,0.22); }
-    .admin-link-footer { font-size: 0.72rem; color: rgba(255,255,255,0.12); text-decoration: none; transition: color 0.3s; }
-    .admin-link-footer:hover { color: rgba(255,255,255,0.35); }
+/* ── WHY US ── */
+.why-section{background:var(--bg-1);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-top:3rem;border-radius:var(--rl);overflow:hidden}
+.why-card{background:var(--bg-1);padding:2rem;position:relative;overflow:hidden}
+.why-card::after{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(to bottom,var(--accent),transparent)}
+.why-card h4{font-family:'Rajdhani',sans-serif;font-size:1.05rem;font-weight:700;color:var(--text-1);margin-bottom:.5rem}
+.why-card p{font-size:.83rem;color:var(--text-2);line-height:1.7;font-weight:300}
+.why-num{font-family:'Rajdhani',sans-serif;font-size:3rem;font-weight:700;color:rgba(91,189,212,0.07);position:absolute;top:.5rem;right:1rem;line-height:1}
 
-    /* ── WHATSAPP FLOAT ── */
-    .wa-float { position: fixed; bottom: 1.75rem; right: 1.75rem; width: 54px; height: 54px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 16px rgba(37,211,102,0.35); transition: transform 0.2s; z-index: 200; }
-    .wa-float:hover { transform: scale(1.08); }
-    .wa-float svg { width: 28px; height: 28px; fill: white; }
+/* ── REVIEW ── */
+.review-section{padding:5rem 2.5rem;text-align:center;position:relative;overflow:hidden}
+.review-section::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:400px;background:radial-gradient(circle,rgba(201,168,76,0.05),transparent 70%);pointer-events:none}
+.stars{color:var(--gold);font-size:1.1rem;letter-spacing:5px;margin-bottom:1.5rem}
+.review-quote{font-family:'Rajdhani',sans-serif;font-size:1.9rem;font-weight:400;color:var(--text-1);max-width:620px;margin:0 auto .75rem;line-height:1.45;font-style:italic}
+.review-by{font-size:.75rem;color:var(--text-3);letter-spacing:2px;text-transform:uppercase}
+.review-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(91,189,212,0.06);border:1px solid rgba(91,189,212,0.15);border-radius:20px;padding:.4rem 1.1rem;margin-top:1.5rem;font-size:.72rem;color:var(--accent);letter-spacing:1px;text-decoration:none;transition:background .2s}
+.review-badge:hover{background:rgba(91,189,212,0.1)}
+.rdot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0}
 
-    /* ── ADMIN PANEL ── */
-    #admin-overlay { display: none; position: fixed; inset: 0; background: rgba(10,18,26,0.96); z-index: 1000; overflow-y: auto; }
-    #admin-overlay.open { display: block; }
-    .admin-wrap { max-width: 800px; margin: 0 auto; padding: 2rem; }
-    .admin-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
-    .admin-header h2 { font-family: 'Rajdhani', sans-serif; font-size: 1.6rem; font-weight: 700; color: white; }
-    .admin-header p { font-size: 0.8rem; color: rgba(255,255,255,0.4); margin-top: 2px; }
-    .admin-close { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: white; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; font-size: 0.85rem; transition: background 0.2s; }
-    .admin-close:hover { background: rgba(255,255,255,0.15); }
+/* ── CONTACT ── */
+.contact-section{background:var(--bg-1);border-top:1px solid var(--border);padding:6rem 2.5rem}
+.contact-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.contact-info h3{font-family:'Rajdhani',sans-serif;font-size:2.2rem;font-weight:700;color:var(--text-1);margin-bottom:2rem;line-height:1.1}
+.c-row{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.5rem}
+.c-icon{width:36px;height:36px;border-radius:var(--r);background:var(--accent-glow);border:1px solid var(--border-bright);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.c-icon svg{width:16px;height:16px;stroke:var(--accent);stroke-width:1.5;fill:none}
+.c-row p{font-size:.68rem;color:var(--text-3);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:3px}
+.c-row strong{font-size:.9rem;color:var(--text-1);font-weight:400;line-height:1.5}
+.c-row strong a{color:var(--text-1);text-decoration:none}
+.c-form{background:var(--bg-2);border-radius:var(--rl);padding:2rem;border:1px solid var(--border)}
+.c-form h4{font-family:'Rajdhani',sans-serif;font-size:1.2rem;font-weight:700;color:var(--text-1);margin-bottom:1.5rem}
+.fg{margin-bottom:1.1rem}
+.fg label{font-size:.68rem;color:var(--text-3);letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:5px}
+.fg input,.fg textarea,.fg select{width:100%;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:var(--r);padding:.65rem .85rem;font-size:.87rem;color:var(--text-1);font-family:'Inter',sans-serif;outline:none;transition:border-color .2s;-webkit-appearance:none;appearance:none}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--accent);background:rgba(91,189,212,0.04)}
+.fg select option{background:#0C1522;color:var(--text-1)}
+.fg textarea{resize:vertical;min-height:85px}
+.submit-btn{width:100%;background:var(--accent);color:#070C14;border:none;border-radius:var(--r);padding:.85rem;font-family:'Rajdhani',sans-serif;font-size:1rem;font-weight:700;letter-spacing:1px;cursor:pointer;transition:all .2s;margin-top:.5rem}
+.submit-btn:hover{background:#fff;transform:translateY(-1px)}
 
-    /* Add post form */
-    .add-post-form { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.75rem; margin-bottom: 2rem; }
-    .add-post-form h3 { font-family: 'Rajdhani', sans-serif; font-size: 1.1rem; color: var(--glass-blue); margin-bottom: 1.25rem; }
-    .admin-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
-    .admin-form-group { margin-bottom: 1rem; }
-    .admin-form-group label { font-size: 0.7rem; color: rgba(255,255,255,0.45); letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 6px; }
-    .admin-form-group input, .admin-form-group textarea, .admin-form-group select { width: 100%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; padding: 0.65rem 0.8rem; font-size: 0.88rem; color: white; font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s; }
-    .admin-form-group input:focus, .admin-form-group textarea:focus, .admin-form-group select:focus { border-color: var(--glass-blue); }
-    .admin-form-group textarea { resize: vertical; min-height: 70px; }
-    .admin-form-group select option { background: #1C2B3A; }
+/* ── MAP ── */
+.map-bar{background:var(--bg-2);border-top:1px solid var(--border);padding:1.5rem 2.5rem;display:flex;align-items:center;gap:1rem;max-width:100%}
+.map-bar svg{width:18px;height:18px;stroke:var(--accent);stroke-width:1.5;fill:none;flex-shrink:0}
+.map-bar p{font-size:.83rem;color:var(--text-2)}
+.map-bar a{color:var(--accent);text-decoration:none}
+.map-bar a:hover{text-decoration:underline}
 
-    /* Image upload */
-    .img-upload-zone { border: 2px dashed rgba(93,184,212,0.3); border-radius: 6px; padding: 2rem; text-align: center; cursor: pointer; transition: border-color 0.2s; position: relative; }
-    .img-upload-zone:hover { border-color: rgba(93,184,212,0.6); }
-    .img-upload-zone.drag-over { border-color: var(--glass-blue); background: rgba(93,184,212,0.06); }
-    .img-upload-zone input[type=file] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
-    .img-upload-zone svg { width: 36px; height: 36px; stroke: rgba(93,184,212,0.5); stroke-width: 1.5; fill: none; margin: 0 auto 0.75rem; display: block; }
-    .img-upload-zone p { font-size: 0.85rem; color: rgba(255,255,255,0.4); }
-    .img-upload-zone p span { color: var(--glass-blue); font-weight: 500; }
-    .img-upload-zone .img-preview { width: 100%; max-height: 200px; object-fit: cover; border-radius: 4px; display: none; }
-    .img-upload-zone.has-image .img-preview { display: block; }
-    .img-upload-zone.has-image svg, .img-upload-zone.has-image p { display: none; }
+/* ── FOOTER ── */
+footer{background:#040810;border-top:1px solid var(--border);padding:3rem 2.5rem 2rem}
+.foot-inner{max-width:1000px;margin:0 auto;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:2.5rem}
+.foot-brand .logo{font-size:1.2rem;display:block;margin-bottom:.6rem}
+.foot-brand p{font-size:.78rem;color:var(--text-3);line-height:1.7;max-width:230px}
+.foot-col h5{font-family:'Rajdhani',sans-serif;font-size:.72rem;font-weight:700;color:var(--text-2);letter-spacing:2px;text-transform:uppercase;margin-bottom:1rem}
+.foot-col ul{list-style:none}
+.foot-col li{margin-bottom:.6rem}
+.foot-col a{font-size:.8rem;color:var(--text-3);text-decoration:none;transition:color .2s}
+.foot-col a:hover{color:var(--accent)}
+.foot-bottom{max-width:1000px;margin:2rem auto 0;padding-top:1.25rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+.foot-bottom p{font-size:.72rem;color:var(--text-3)}
+.admin-link{font-size:.72rem;color:rgba(255,255,255,0.08);text-decoration:none;transition:color .3s}
+.admin-link:hover{color:var(--text-3)}
 
-    .add-btn { background: var(--glass-blue); color: var(--steel); border: none; border-radius: 4px; padding: 0.75rem 2rem; font-family: 'Rajdhani', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.5px; cursor: pointer; transition: background 0.2s; }
-    .add-btn:hover { background: var(--gold); color: white; }
-    .add-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+/* ── WHATSAPP ── */
+.wa-float{position:fixed;bottom:2rem;right:2rem;width:52px;height:52px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.3);transition:transform .2s,box-shadow .2s;z-index:200}
+.wa-float:hover{transform:scale(1.08);box-shadow:0 6px 24px rgba(37,211,102,.4)}
+.wa-float svg{width:26px;height:26px;fill:#fff}
 
-    /* Projects list */
-    .admin-posts-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
-    .admin-posts-header h3 { font-family: 'Rajdhani', sans-serif; font-size: 1.1rem; color: white; }
-    .admin-posts-header span { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
-    #admin-posts-list { display: flex; flex-direction: column; gap: 0.75rem; }
-    .admin-post-item { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 1rem 1.25rem; display: flex; align-items: center; gap: 1rem; }
-    .admin-post-thumb { width: 72px; height: 52px; border-radius: 4px; object-fit: cover; background: rgba(255,255,255,0.06); flex-shrink: 0; }
-    .admin-post-thumb-ph { width: 72px; height: 52px; border-radius: 4px; background: rgba(255,255,255,0.06); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
-    .admin-post-thumb-ph svg { width: 20px; height: 20px; stroke: rgba(255,255,255,0.2); stroke-width: 1.5; fill: none; }
-    .admin-post-info { flex: 1; min-width: 0; }
-    .admin-post-info h4 { font-size: 0.9rem; color: white; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .admin-post-info p { font-size: 0.75rem; color: rgba(255,255,255,0.35); margin-top: 3px; }
-    .admin-post-cat { font-size: 0.65rem; background: rgba(93,184,212,0.15); color: var(--glass-blue); padding: 2px 8px; border-radius: 10px; }
-    .admin-post-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
-    .admin-del-btn { background: rgba(220,50,50,0.1); border: 1px solid rgba(220,50,50,0.2); color: #f87171; padding: 0.4rem 0.75rem; border-radius: 4px; font-size: 0.78rem; cursor: pointer; transition: background 0.2s; }
-    .admin-del-btn:hover { background: rgba(220,50,50,0.2); }
-    .admin-no-posts { text-align: center; padding: 2.5rem; color: rgba(255,255,255,0.25); font-size: 0.9rem; }
+/* ── TOAST ── */
+#toast{position:fixed;bottom:6rem;left:50%;transform:translateX(-50%) translateY(16px);background:var(--bg-2);color:var(--text-1);padding:.7rem 1.4rem;border-radius:var(--r);font-size:.85rem;z-index:2000;border:1px solid var(--border);border-left:3px solid var(--accent);opacity:0;transition:all .3s;pointer-events:none;white-space:nowrap}
+#toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+#toast.success{border-left-color:#4ade80}
+#toast.error{border-left-color:var(--danger)}
 
-    /* Login modal */
-    #admin-login { display: none; position: fixed; inset: 0; background: rgba(10,18,26,0.97); z-index: 1001; align-items: center; justify-content: center; }
-    #admin-login.open { display: flex; }
-    .login-box { background: var(--steel-light); border: 1px solid rgba(93,184,212,0.2); border-radius: 10px; padding: 2.5rem; width: 340px; text-align: center; }
-    .login-box h2 { font-family: 'Rajdhani', sans-serif; font-size: 1.5rem; color: white; margin-bottom: 0.4rem; }
-    .login-box p { font-size: 0.82rem; color: rgba(255,255,255,0.4); margin-bottom: 1.75rem; }
-    .login-box input { width: 100%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; padding: 0.7rem 0.9rem; font-size: 0.9rem; color: white; font-family: 'Inter', sans-serif; outline: none; text-align: center; letter-spacing: 3px; margin-bottom: 1rem; }
-    .login-box input:focus { border-color: var(--glass-blue); }
-    .login-btn { width: 100%; background: var(--glass-blue); color: var(--steel); border: none; border-radius: 4px; padding: 0.75rem; font-family: 'Rajdhani', sans-serif; font-size: 1rem; font-weight: 700; cursor: pointer; transition: background 0.2s; }
-    .login-btn:hover { background: var(--gold); color: white; }
-    .login-error { color: #f87171; font-size: 0.8rem; margin-top: 0.75rem; display: none; }
-    .login-cancel { background: none; border: none; color: rgba(255,255,255,0.3); font-size: 0.8rem; margin-top: 1rem; cursor: pointer; }
-    .login-cancel:hover { color: rgba(255,255,255,0.6); }
+/* ── LIGHTBOX ── */
+#lightbox{display:none;position:fixed;inset:0;background:rgba(4,8,16,.96);z-index:500;align-items:center;justify-content:center}
+#lightbox.open{display:flex}
+#lightbox img{max-width:92vw;max-height:90vh;object-fit:contain;border-radius:var(--r)}
+#lb-close{position:absolute;top:1.5rem;right:1.5rem;background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text-1);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;transition:background .2s}
+#lb-close:hover{background:rgba(255,255,255,0.12)}
 
-    /* Toast */
-    #toast { position: fixed; bottom: 6rem; right: 2rem; background: var(--steel); color: white; padding: 0.75rem 1.25rem; border-radius: 6px; font-size: 0.85rem; z-index: 2000; border-left: 3px solid var(--glass-blue); transform: translateY(20px); opacity: 0; transition: all 0.3s; pointer-events: none; }
-    #toast.show { transform: translateY(0); opacity: 1; }
-    #toast.success { border-left-color: #4ade80; }
-    #toast.error { border-left-color: #f87171; }
+/* ── ADMIN LOGIN ── */
+#admin-login{display:none;position:fixed;inset:0;background:rgba(4,8,16,.97);z-index:1001;align-items:center;justify-content:center}
+#admin-login.open{display:flex}
+.login-box{background:var(--bg-1);border:1px solid var(--border-bright);border-radius:var(--rl);padding:2.5rem;width:340px;text-align:center}
+.login-box h2{font-family:'Rajdhani',sans-serif;font-size:1.6rem;color:var(--text-1);margin-bottom:.4rem}
+.login-box p{font-size:.82rem;color:var(--text-3);margin-bottom:1.75rem}
+.login-box input{width:100%;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:var(--r);padding:.7rem .9rem;font-size:.9rem;color:var(--text-1);font-family:'Inter',sans-serif;outline:none;text-align:center;letter-spacing:3px;margin-bottom:1rem;transition:border-color .2s}
+.login-box input:focus{border-color:var(--accent)}
+.login-btn{width:100%;background:var(--accent);color:#070C14;border:none;border-radius:var(--r);padding:.75rem;font-family:'Rajdhani',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:all .2s}
+.login-btn:hover{background:#fff}
+.login-err{color:var(--danger);font-size:.8rem;margin-top:.75rem;display:none}
+.login-cancel{background:none;border:none;color:var(--text-3);font-size:.8rem;margin-top:1rem;cursor:pointer;transition:color .2s}
+.login-cancel:hover{color:var(--text-2)}
 
-    /* RESPONSIVE */
-    @media (max-width: 860px) {
-      .hero-right { display: none; }
-      .hero h1 { font-size: 2.8rem; }
-      .nav-links { display: none; }
-      .nav-toggle { display: flex; }
-      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: var(--steel); padding: 1.5rem 2.5rem; gap: 1.25rem; border-top: 1px solid rgba(93,184,212,0.12); }
-      .why-grid { grid-template-columns: 1fr; }
-      .contact-inner { grid-template-columns: 1fr; }
-      #gallery-grid { grid-template-columns: 1fr 1fr; }
-      .g-item:first-child { grid-column: 1/3; }
-      .admin-form-row { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 560px) {
-      .hero { padding: 3rem 1.5rem; }
-      .hero h1 { font-size: 2.3rem; }
-      .section { padding: 3.5rem 1.5rem; }
-      #gallery-grid { grid-template-columns: 1fr; }
-      .g-item:first-child { grid-column: 1; }
-      .stat { padding: 0 1.5rem; border-right: none; }
-    }
-  </style>
+/* ── ADMIN PANEL ── */
+#admin-overlay{display:none;position:fixed;inset:0;background:rgba(4,8,16,.97);z-index:1000;overflow-y:auto}
+#admin-overlay.open{display:block}
+.admin-wrap{max-width:820px;margin:0 auto;padding:2rem}
+.admin-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+.admin-hdr h2{font-family:'Rajdhani',sans-serif;font-size:1.6rem;color:var(--text-1)}
+.admin-hdr p{font-size:.78rem;color:var(--text-3);margin-top:2px}
+.admin-close{background:rgba(255,255,255,0.05);border:1px solid var(--border);color:var(--text-2);padding:.5rem 1rem;border-radius:var(--r);cursor:pointer;font-size:.85rem;transition:background .2s}
+.admin-close:hover{background:rgba(255,255,255,0.1)}
+.add-form{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:var(--rl);padding:1.75rem;margin-bottom:2rem}
+.add-form h3{font-family:'Rajdhani',sans-serif;font-size:1.05rem;color:var(--accent);margin-bottom:1.25rem}
+.arow{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.afg{margin-bottom:1rem}
+.afg label{font-size:.68rem;color:var(--text-3);letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:5px}
+.afg input,.afg textarea,.afg select{width:100%;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:var(--r);padding:.65rem .8rem;font-size:.87rem;color:var(--text-1);font-family:'Inter',sans-serif;outline:none;transition:border-color .2s;-webkit-appearance:none}
+.afg input:focus,.afg textarea:focus,.afg select:focus{border-color:var(--accent)}
+.afg select option{background:#0C1522;color:var(--text-1)}
+.afg textarea{resize:vertical;min-height:65px}
+
+/* Multi-image upload */
+.multi-upload-zone{border:2px dashed rgba(91,189,212,0.25);border-radius:var(--r);padding:1.5rem;text-align:center;cursor:pointer;transition:all .2s;position:relative;margin-bottom:.75rem}
+.multi-upload-zone:hover,.multi-upload-zone.drag-over{border-color:var(--accent);background:var(--accent-glow)}
+.multi-upload-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.multi-upload-zone svg{width:30px;height:30px;stroke:rgba(91,189,212,0.4);stroke-width:1.5;fill:none;margin:0 auto .5rem;display:block}
+.multi-upload-zone p{font-size:.82rem;color:var(--text-3)}
+.multi-upload-zone p span{color:var(--accent)}
+.img-preview-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:8px;margin-top:.75rem}
+.prev-item{position:relative;border-radius:5px;overflow:hidden;aspect-ratio:1;border:1px solid var(--border)}
+.prev-item img{width:100%;height:100%;object-fit:cover;display:block}
+.prev-item .rm-btn{position:absolute;top:4px;right:4px;width:20px;height:20px;border-radius:50%;background:rgba(4,8,16,.8);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:.7rem;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s;line-height:1}
+.prev-item .rm-btn:hover{background:var(--danger)}
+.prev-item .main-badge{position:absolute;bottom:4px;left:4px;background:var(--accent);color:#070C14;font-size:.55rem;padding:1px 5px;border-radius:3px;font-weight:600;letter-spacing:.5px}
+.add-more-lbl{display:inline-flex;align-items:center;gap:5px;font-size:.78rem;color:var(--accent);cursor:pointer;border:1px dashed rgba(91,189,212,0.3);padding:.35rem .75rem;border-radius:var(--r);transition:all .2s;position:relative;overflow:hidden}
+.add-more-lbl:hover{background:var(--accent-glow);border-color:var(--accent)}
+.add-more-lbl input{position:absolute;inset:0;opacity:0;cursor:pointer;font-size:0}
+.add-btn{background:var(--accent);color:#070C14;border:none;border-radius:var(--r);padding:.7rem 1.75rem;font-family:'Rajdhani',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:.5px;cursor:pointer;transition:all .2s;margin-top:.5rem}
+.add-btn:hover{background:#fff}
+.add-btn:disabled{opacity:.4;cursor:not-allowed}
+.posts-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.posts-hdr h3{font-family:'Rajdhani',sans-serif;font-size:1.05rem;color:var(--text-1)}
+.posts-hdr span{font-size:.75rem;color:var(--text-3)}
+#admin-list{display:flex;flex-direction:column;gap:.6rem}
+.apost{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:var(--r);padding:.9rem 1.1rem;display:flex;align-items:center;gap:1rem}
+.apost-thumbs{display:flex;gap:3px;flex-shrink:0}
+.apost-thumb{width:52px;height:40px;border-radius:4px;object-fit:cover;border:1px solid var(--border)}
+.apost-thumb-ph{width:52px;height:40px;border-radius:4px;background:var(--bg-2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center}
+.apost-thumb-ph svg{width:16px;height:16px;stroke:var(--text-3);stroke-width:1.5;fill:none}
+.apost-info{flex:1;min-width:0}
+.apost-info h4{font-size:.88rem;color:var(--text-1);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.apost-info p{font-size:.72rem;color:var(--text-3);margin-top:2px}
+.acat{display:inline-block;background:var(--accent-glow);color:var(--accent);font-size:.62rem;padding:1px 7px;border-radius:10px;margin-right:4px}
+.adel-btn{background:rgba(248,113,113,0.08);border:1px solid rgba(248,113,113,0.2);color:var(--danger);padding:.35rem .7rem;border-radius:var(--r);font-size:.75rem;cursor:pointer;flex-shrink:0;transition:background .2s}
+.adel-btn:hover{background:rgba(248,113,113,0.18)}
+.ano-posts{text-align:center;padding:2.5rem;color:var(--text-3);font-size:.88rem}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .hero-visual{display:none}
+  .hero h1{font-size:3rem}
+  .services-grid{grid-template-columns:1fr 1fr}
+  #gallery-grid{grid-template-columns:1fr 1fr}
+  .g-item:first-child{grid-column:1/3}
+  .why-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .nav-toggle{display:flex}
+  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:rgba(7,12,20,.97);backdrop-filter:blur(16px);padding:1.5rem 2.5rem;gap:1.25rem;border-bottom:1px solid var(--border);z-index:99}
+  .arow{grid-template-columns:1fr}
+  .related-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .hero{padding:3.5rem 1.5rem}
+  .hero h1{font-size:2.4rem}
+  .section{padding:4rem 1.5rem}
+  .portfolio-section{padding:4rem 1.5rem}
+  #gallery-grid{grid-template-columns:1fr}
+  .g-item:first-child{grid-column:1}
+  .services-grid{grid-template-columns:1fr}
+  .stat{padding:0 1.5rem;border-right:none}
+  .related-grid{grid-template-columns:1fr}
+  .carousel-slide img{height:45vh}
+  .detail-title{font-size:2rem}
+}
+</style>
 </head>
 <body>
 
 <!-- LIGHTBOX -->
 <div id="lightbox">
-  <button id="lightbox-close" onclick="closeLightbox()">✕</button>
-  <img id="lightbox-img" src="" alt="">
-  <div id="lightbox-info">
-    <h3 id="lightbox-title"></h3>
-    <p id="lightbox-desc"></p>
-  </div>
+  <button id="lb-close" onclick="closeLightbox()">&#x2715;</button>
+  <img id="lb-img" src="" alt="">
 </div>
 
-<!-- ADMIN LOGIN -->
+<!-- LOGIN -->
 <div id="admin-login">
   <div class="login-box">
-    <h2>Admin Access</h2>
-    <p>Enter your password to manage the portfolio</p>
-    <input type="password" id="admin-pwd-input" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()">
+    <h2>Admin Panel</h2>
+    <p>Enter password to manage portfolio</p>
+    <input type="password" id="pwd-input" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" onkeydown="if(event.key==='Enter')doLogin()">
     <button class="login-btn" onclick="doLogin()">Sign In</button>
-    <div class="login-error" id="login-err">Incorrect password. Try again.</div>
-    <br>
+    <div class="login-err" id="login-err">Incorrect password.</div><br>
     <button class="login-cancel" onclick="closeLogin()">Cancel</button>
   </div>
 </div>
@@ -297,24 +371,16 @@
 <!-- ADMIN PANEL -->
 <div id="admin-overlay">
   <div class="admin-wrap">
-    <div class="admin-header">
-      <div>
-        <h2>Portfolio Manager</h2>
-        <p>Mumtaz Windoor — Add, view, and remove project photos</p>
-      </div>
-      <button class="admin-close" onclick="closeAdmin()">✕ Close Panel</button>
+    <div class="admin-hdr">
+      <div><h2>Portfolio Manager</h2><p>Mumtaz Windoor &mdash; add, manage and remove projects</p></div>
+      <button class="admin-close" onclick="closeAdmin()">&#x2715; Close</button>
     </div>
-
-    <!-- Add new post -->
-    <div class="add-post-form">
+    <!-- Add form -->
+    <div class="add-form">
       <h3>+ Add New Project</h3>
-      <div class="admin-form-row">
-        <div class="admin-form-group">
-          <label>Project Title *</label>
-          <input type="text" id="p-title" placeholder="e.g. Aluminium Windows — DHA Phase 5">
-        </div>
-        <div class="admin-form-group">
-          <label>Category *</label>
+      <div class="arow">
+        <div class="afg"><label>Project Title *</label><input type="text" id="p-title" placeholder="e.g. Aluminium Windows &mdash; DHA Phase 5"></div>
+        <div class="afg"><label>Category *</label>
           <select id="p-cat">
             <option value="Aluminium Windows">Aluminium Windows</option>
             <option value="Glass Doors">Glass Doors</option>
@@ -327,28 +393,25 @@
           </select>
         </div>
       </div>
-      <div class="admin-form-group">
-        <label>Short Description</label>
-        <textarea id="p-desc" placeholder="Brief note about this project — location, material, size..."></textarea>
-      </div>
-      <div class="admin-form-group">
-        <label>Photo *</label>
-        <div class="img-upload-zone" id="upload-zone">
-          <input type="file" accept="image/*" id="img-file-input" onchange="handleImageSelect(this)">
+      <div class="afg"><label>Description</label><textarea id="p-desc" placeholder="Brief project note &mdash; location, material, scope..."></textarea></div>
+      <div class="afg">
+        <label>Photos * &nbsp;<span style="color:var(--text-3);font-size:.65rem;letter-spacing:0;text-transform:none">(select multiple, or add one by one)</span></label>
+        <div class="multi-upload-zone" id="upload-zone">
+          <input type="file" accept="image/*" multiple id="img-input" onchange="handleFiles(this.files)">
           <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-          <p><span>Click to upload</span> or drag &amp; drop a photo<br><small style="color:rgba(255,255,255,0.25);font-size:0.72rem">JPG, PNG, WEBP — max 5MB</small></p>
-          <img class="img-preview" id="img-preview" src="" alt="">
+          <p><span>Click to upload</span> or drag &amp; drop &mdash; select multiple photos at once<br><small style="color:var(--text-3);font-size:.68rem">JPG, PNG, WEBP &mdash; first photo becomes the cover</small></p>
         </div>
+        <div id="preview-grid" class="img-preview-grid"></div>
+        <label class="add-more-lbl" id="add-more-lbl" style="display:none">
+          <input type="file" accept="image/*" multiple onchange="handleFiles(this.files)">
+          + Add more photos
+        </label>
       </div>
       <button class="add-btn" id="add-btn" onclick="addProject()">Add to Portfolio</button>
     </div>
-
-    <!-- Projects list -->
-    <div class="admin-posts-header">
-      <h3>Current Portfolio</h3>
-      <span id="post-count">0 projects</span>
-    </div>
-    <div id="admin-posts-list"></div>
+    <!-- List -->
+    <div class="posts-hdr"><h3>Current Portfolio</h3><span id="post-count">0 projects</span></div>
+    <div id="admin-list"></div>
   </div>
 </div>
 
@@ -357,431 +420,512 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="logo">Mumtaz <span>Windoor</span></a>
+  <a href="#" class="logo" onclick="goHome(event)">Mumtaz <span>Windoor</span></a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#work">Our Work</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#services" onclick="goHome(event,'#services')">Services</a></li>
+    <li><a href="#work" onclick="goHome(event,'#work')">Our Work</a></li>
+    <li><a href="#about" onclick="goHome(event,'#about')">About</a></li>
+    <li><a href="#contact" onclick="goHome(event,'#contact')">Contact</a></li>
   </ul>
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
-  </button>
-  <a href="#contact" class="nav-cta">Get a Quote</a>
+  <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  <a href="#contact" class="nav-cta" onclick="goHome(event,'#contact')">Get a Quote</a>
 </nav>
+
+<!-- ========== MAIN PAGE ========== -->
+<div id="page-main">
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg-panes"><div class="pane"></div><div class="pane"></div><div class="pane"></div><div class="pane"></div><div class="pane"></div></div>
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
   <div class="hero-content">
-    <div class="eyebrow">Lahore's Trusted Glazing Specialists</div>
-    <h1>Crafted in <em>Glass</em> &amp; Aluminium</h1>
-    <p>From precision-fitted aluminium windows to bespoke shower cabins and stainless steel railings — Mumtaz Windoor delivers lasting quality to homes and businesses across Lahore.</p>
+    <div class="hero-badge"><span></span>Lahore&rsquo;s Trusted Glazing Specialists</div>
+    <h1>Crafted in <em>Glass</em><br>&amp; <span class="g">Aluminium</span></h1>
+    <p>From precision-fitted aluminium windows to bespoke shower cabins and stainless steel railings &mdash; delivering lasting quality to homes and businesses across Lahore.</p>
     <div class="hero-btns">
-      <a href="#contact" class="btn-primary">Request a Free Quote</a>
-      <a href="#work" class="btn-outline">View Our Work</a>
+      <a href="#contact" class="btn-primary" onclick="goHome(event,'#contact')">Request Free Quote &rarr;</a>
+      <a href="#work" class="btn-ghost" onclick="goHome(event,'#work')">View Our Work</a>
     </div>
   </div>
-  <div class="hero-right" aria-hidden="true">
-    <div class="hero-img-box" id="hero-img-1">
-      <div class="img-ph"><svg viewBox="0 0 40 40" fill="none" stroke="white" stroke-width="1.5"><rect x="4" y="4" width="32" height="32" rx="2"/><line x1="4" y1="20" x2="36" y2="20"/><line x1="20" y1="4" x2="20" y2="36"/></svg><span>ADD PHOTOS VIA ADMIN</span></div>
-    </div>
-    <div class="hero-img-box" id="hero-img-2">
-      <div class="img-ph"><svg viewBox="0 0 40 40" fill="none" stroke="white" stroke-width="1.5"><path d="M8 4h24v32H8z"/><path d="M8 20h24"/></svg><span>GLASS DOORS</span></div>
-    </div>
-    <div class="hero-img-box" id="hero-img-3">
-      <div class="img-ph"><svg viewBox="0 0 40 40" fill="none" stroke="white" stroke-width="1.5"><path d="M10 10c0 0 4 4 10 4s10-4 10-4v16c0 0-4 4-10 4s-10-4-10-4z"/></svg><span>SHOWER CABINS</span></div>
+  <div class="hero-visual">
+    <div class="hero-img-grid">
+      <div class="hero-img-cell" id="hero-img-0"><div class="hero-img-ph"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="12" y1="3" x2="12" y2="21"/></svg><span>Add photos via admin</span></div></div>
+      <div class="hero-img-cell" id="hero-img-1"><div class="hero-img-ph"><svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8"/><polyline points="16 3 21 3 21 8"/></svg><span>Glass Doors</span></div></div>
+      <div class="hero-img-cell" id="hero-img-2"><div class="hero-img-ph"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 4l4 4M20 4l-4 4"/></svg><span>Shower Cabins</span></div></div>
     </div>
   </div>
 </section>
 
 <!-- STATS -->
 <div class="stats">
-  <div class="stat"><div class="stat-num">500<span>+</span></div><div class="stat-label">Projects Completed</div></div>
-  <div class="stat"><div class="stat-num">5<span>.0</span></div><div class="stat-label">Google Rating</div></div>
-  <div class="stat"><div class="stat-num">10<span>+</span></div><div class="stat-label">Years Experience</div></div>
-  <div class="stat"><div class="stat-num">24<span>hr</span></div><div class="stat-label">Quote Turnaround</div></div>
+  <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Projects Completed</div></div>
+  <div class="stat"><div class="stat-num">5.0</div><div class="stat-label">Google Rating</div></div>
+  <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Years Experience</div></div>
+  <div class="stat"><div class="stat-num">24hr</div><div class="stat-label">Quote Turnaround</div></div>
 </div>
 
 <!-- SERVICES -->
-<section class="section services-bg" id="services">
-  <div class="section-inner">
-    <div class="sec-label" style="color:rgba(184,224,236,0.8)">What We Do</div>
-    <div class="sec-title" style="color:#fff">Our Services</div>
-    <div class="sec-sub" style="color:rgba(255,255,255,0.48)">Specialists in aluminium fabrication, glass installation, and interior finishes — all under one roof.</div>
+<section class="section services-section" id="services">
+  <div class="sec-inner">
+    <div class="sec-tag">What We Do</div>
+    <div class="sec-title">Our Services</div>
+    <div class="sec-sub">Specialists in aluminium fabrication, glass installation, and interior finishes &mdash; all under one roof in Lahore.</div>
     <div class="services-grid">
-      <div class="service-card"><div class="gold-line"></div><div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="1"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/></svg></div><h3>Aluminium Windows</h3><p>Custom-fabricated frames with precision sealing and weather resistance for residential and commercial properties.</p></div>
-      <div class="service-card"><div class="gold-line"></div><div class="service-icon"><svg viewBox="0 0 24 24"><rect x="3" y="2" width="18" height="22" rx="1"/><line x1="12" y1="2" x2="12" y2="24"/></svg></div><h3>Glass Doors</h3><p>Frameless and framed glass doors — elegant solutions for offices, storefronts, and homes.</p></div>
-      <div class="service-card"><div class="gold-line"></div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 4l4 4M20 4l-4 4M4 20l4-4M20 20l-4-4"/></svg></div><h3>Shower Cabins</h3><p>Bespoke shower enclosures with tempered safety glass, custom sizing, and premium hardware finishes.</p></div>
-      <div class="service-card"><div class="gold-line"></div><div class="service-icon"><svg viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></div><h3>Stainless Steel Railings</h3><p>Staircase, balcony, and balustrade railings fabricated and installed to exact specifications.</p></div>
-      <div class="service-card"><div class="gold-line"></div><div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="M2 8h20M2 12h20M2 16h20"/></svg></div><h3>Wallpaper &amp; Glass Paper</h3><p>Interior wall finishing with quality wallpapers and decorative glass films for privacy and style.</p></div>
-      <div class="service-card"><div class="gold-line" style="background:var(--gold)"></div><div class="service-icon" style="background:rgba(201,168,76,0.1);border-color:rgba(201,168,76,0.22)"><svg viewBox="0 0 24 24" style="stroke:var(--gold)"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>Residential &amp; Commercial</h3><p>All project scales — from a single window to a complete commercial fit-out across Lahore.</p></div>
+      <div class="svc-card"><div class="svc-bar"></div><div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="1"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/></svg></div><h3>Aluminium Windows</h3><p>Custom-fabricated frames with precision sealing and weather resistance for residential and commercial properties.</p></div>
+      <div class="svc-card"><div class="svc-bar"></div><div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="3" y="2" width="18" height="22" rx="1"/><line x1="12" y1="2" x2="12" y2="24"/></svg></div><h3>Glass Doors</h3><p>Frameless and framed glass doors &mdash; elegant solutions for offices, storefronts, and residential entrances.</p></div>
+      <div class="svc-card"><div class="svc-bar"></div><div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 4l4 4M20 4l-4 4M4 20l4-4M20 20l-4-4"/></svg></div><h3>Shower Cabins</h3><p>Bespoke enclosures with tempered safety glass, custom sizing, and premium hardware finishes.</p></div>
+      <div class="svc-card"><div class="svc-bar"></div><div class="svc-icon"><svg viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></div><h3>Steel Railings</h3><p>Stainless steel staircase, balcony, and balustrade railings fabricated and installed to specification.</p></div>
+      <div class="svc-card"><div class="svc-bar" style="background:var(--gold)"></div><div class="svc-icon" style="background:var(--gold-glow);border-color:var(--border-gold)"><svg viewBox="0 0 24 24" style="stroke:var(--gold)"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="M2 8h20M2 12h20"/></svg></div><h3>Wallpaper &amp; Glass Paper</h3><p>Interior wall finishing with quality wallpapers and decorative glass films for privacy and style.</p></div>
+      <div class="svc-card"><div class="svc-bar" style="background:var(--gold)"></div><div class="svc-icon" style="background:var(--gold-glow);border-color:var(--border-gold)"><svg viewBox="0 0 24 24" style="stroke:var(--gold)"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>Residential &amp; Commercial</h3><p>All project scales &mdash; from a single window to a complete commercial fit-out across Lahore.</p></div>
     </div>
   </div>
 </section>
 
 <!-- PORTFOLIO -->
-<section class="section work-section" id="work">
-  <div class="section-inner">
-    <div class="sec-label">Portfolio</div>
-    <div class="sec-title">Our Work</div>
-    <div class="sec-sub">Every project reflects our craftsmanship. Photos added by the owner from real completed projects.</div>
-    <div id="gallery-grid">
-      <div class="gallery-empty" id="gallery-empty">
-        <svg viewBox="0 0 48 48" fill="none" stroke="#ccc" stroke-width="1.5" width="48" height="48" style="margin:0 auto 1rem;display:block"><rect x="4" y="8" width="40" height="32" rx="3"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 8 8 6-6 16 12"/></svg>
-        No photos yet — add your first project in the admin panel.
+<section class="portfolio-section" id="work">
+  <div class="sec-inner">
+    <div class="port-header">
+      <div>
+        <div class="sec-tag">Portfolio</div>
+        <div class="sec-title">Our Work</div>
+        <div class="sec-sub">Real projects, real craftsmanship. Click any project to see all photos.</div>
       </div>
     </div>
-    <div class="gallery-cta"><a href="#contact">Discuss Your Project →</a></div>
+    <div id="gallery-grid">
+      <div class="gallery-empty" id="gallery-empty">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="rgba(91,189,212,0.2)" stroke-width="1.5"><rect x="4" y="8" width="40" height="32" rx="3"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 8 8 6-6 16 12"/></svg>
+        No projects yet &mdash; add photos via the admin panel.
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- WHY US -->
 <section class="section why-section" id="about">
-  <div class="section-inner">
-    <div class="sec-label">Why Choose Us</div>
+  <div class="sec-inner">
+    <div class="sec-tag">Why Choose Us</div>
     <div class="sec-title">Quality You Can See Through</div>
     <div class="sec-sub">Trusted by homeowners and businesses across Lahore for over a decade.</div>
     <div class="why-grid">
-      <div class="why-card"><h4>Precision Fabrication</h4><p>All aluminium profiles are cut and welded in-house, ensuring exact measurements and watertight seals on every installation.</p></div>
-      <div class="why-card"><h4>5-Star Rated on Google</h4><p>A perfect 5.0 rating across all Google reviews — our reputation is built on referrals and repeat clients, not advertising.</p></div>
-      <div class="why-card"><h4>One-Stop Shop</h4><p>Windows, doors, railings, wallpaper — one team handles everything. No coordination headaches between contractors.</p></div>
-      <div class="why-card"><h4>Lahore-Based Specialists</h4><p>We know local buildings and the local climate. Our installs are designed to perform through Lahore's summers and winters.</p></div>
+      <div class="why-card"><div class="why-num">01</div><h4>Precision Fabrication</h4><p>All aluminium profiles cut and welded in-house. Exact measurements and watertight seals on every installation.</p></div>
+      <div class="why-card"><div class="why-num">02</div><h4>5-Star Rated on Google</h4><p>A perfect 5.0 rating across all reviews &mdash; built on referrals and repeat clients, not advertising.</p></div>
+      <div class="why-card"><div class="why-num">03</div><h4>One-Stop Shop</h4><p>Windows, doors, railings, wallpaper &mdash; one team handles everything, one invoice.</p></div>
+      <div class="why-card"><div class="why-num">04</div><h4>Lahore Specialists</h4><p>We know local buildings and the local climate. Installs designed to perform through every season.</p></div>
     </div>
   </div>
 </section>
 
 <!-- REVIEW -->
-<div class="review-strip">
-  <div class="stars">★ ★ ★ ★ ★</div>
-  <div class="review-text">"Specialist work done right — aluminium windows fitted perfectly, sealed clean, finished beautifully."</div>
-  <div class="review-author">Verified Google Customer · Lahore</div>
+<section class="review-section">
+  <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+  <div class="review-quote">&ldquo;Specialist work done right &mdash; the aluminium windows fit perfectly, sealed clean, finished beautifully.&rdquo;</div>
+  <div class="review-by">Verified Google Customer &middot; Lahore</div>
   <a href="https://www.google.com/search?q=Mumtaz+Windoor+Aluminium+%26+Glass+works+Reviews" target="_blank" rel="noopener" class="review-badge">
-    <div class="g-dot"></div>5.0 · 6 Google Reviews — Read all reviews
+    <div class="rdot"></div>5.0 &middot; 6 Google Reviews &mdash; Read all
   </a>
-</div>
+</section>
 
 <!-- CONTACT -->
 <section class="contact-section" id="contact">
-  <div class="contact-inner">
+  <div class="contact-grid">
     <div class="contact-info">
-      <h3>Let's Build Something Together</h3>
-      <div class="contact-row"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91A16 16 0 0 0 15 15.91l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><p>Call / WhatsApp</p><strong><a href="tel:03214526029">0321 4526029</a></strong></div></div>
-      <div class="contact-row"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><p>Address</p><strong>Peer Qolony Abu Baker Street, 1 Walton Rd,<br>Qadri Colony, Lahore 54000</strong></div></div>
-      <div class="contact-row"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><div><p>Located In</p><strong>Mianmeer Hardware Shop</strong></div></div>
-      <div class="contact-row"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div><p>Opening Hours</p><strong>Open daily · Closes 10:00 PM</strong></div></div>
+      <h3>Let&rsquo;s Build Something Together</h3>
+      <div class="c-row"><div class="c-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91A16 16 0 0 0 15 15.91l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><p>Call / WhatsApp</p><strong><a href="tel:03214526029">0321 4526029</a></strong></div></div>
+      <div class="c-row"><div class="c-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><p>Address</p><strong>Peer Qolony Abu Baker Street, 1 Walton Rd,<br>Qadri Colony, Lahore 54000</strong></div></div>
+      <div class="c-row"><div class="c-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><div><p>Located In</p><strong>Mianmeer Hardware Shop</strong></div></div>
+      <div class="c-row"><div class="c-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><p>Opening Hours</p><strong>Open daily &middot; Closes 10:00 PM</strong></div></div>
     </div>
-    <div class="contact-form">
+    <div class="c-form">
       <h4>Request a Free Quote</h4>
-      <form onsubmit="handleSubmit(event)">
-        <div class="form-group"><label for="c-name">Your Name</label><input type="text" id="c-name" placeholder="Muhammad Ali" required></div>
-        <div class="form-group"><label for="c-phone">Phone Number</label><input type="tel" id="c-phone" placeholder="03XX XXXXXXX" required></div>
-        <div class="form-group"><label for="c-service">Service Needed</label>
-          <select id="c-service"><option>Aluminium Windows</option><option>Glass Doors</option><option>Shower Cabin</option><option>Stainless Steel Railings</option><option>Wallpaper / Glass Paper</option><option>Multiple Services</option><option>Other / Not Sure</option></select>
+      <form onsubmit="handleContact(event)">
+        <div class="fg"><label>Your Name</label><input type="text" id="c-name" placeholder="Muhammad Ali" required></div>
+        <div class="fg"><label>Phone Number</label><input type="tel" id="c-phone" placeholder="03XX XXXXXXX" required></div>
+        <div class="fg"><label>Service Needed</label>
+          <select id="c-service"><option>Aluminium Windows</option><option>Glass Doors</option><option>Shower Cabin</option><option>Steel Railings</option><option>Wallpaper / Glass Paper</option><option>Multiple Services</option><option>Other / Not Sure</option></select>
         </div>
-        <div class="form-group"><label for="c-details">Project Details</label><textarea id="c-details" placeholder="Describe your project — dimensions, location, or any other details..."></textarea></div>
-        <button type="submit" class="submit-btn">Send Quote Request →</button>
+        <div class="fg"><label>Project Details</label><textarea id="c-details" placeholder="Describe your project &mdash; dimensions, location, quantity..."></textarea></div>
+        <button type="submit" class="submit-btn">Send via WhatsApp &rarr;</button>
       </form>
     </div>
   </div>
 </section>
 
 <!-- MAP -->
-<div class="map-section">
-  <div class="map-bar">
-    <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-    <p>Peer Qolony Abu Baker Street, 1 Walton Rd, Qadri Colony, Lahore &nbsp;·&nbsp;
-      <a href="https://maps.google.com/?q=Mumtaz+Windoor+Aluminium+Glass+Works+Lahore+Walton+Road" target="_blank" rel="noopener">Open in Google Maps →</a>
-    </p>
-  </div>
+<div class="map-bar">
+  <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+  <p>Peer Qolony Abu Baker Street, 1 Walton Rd, Qadri Colony, Lahore &nbsp;&middot;&nbsp;
+    <a href="https://maps.google.com/?q=Mumtaz+Windoor+Aluminium+Glass+Works+Lahore+Walton+Road" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+  </p>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <a href="#" class="logo">Mumtaz <span>Windoor</span></a>
-      <p>Specialists in aluminium windows, glass doors, shower cabins, steel railings, and wallpaper. Serving Lahore for over a decade.</p>
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <a href="#" class="logo" onclick="goHome(event)">Mumtaz <span>Windoor</span></a>
+      <p>Aluminium windows, glass doors, shower cabins, steel railings and wallpaper &mdash; serving Lahore for over a decade.</p>
     </div>
-    <div class="footer-col">
+    <div class="foot-col">
       <h5>Services</h5>
       <ul>
-        <li><a href="#services">Aluminium Windows</a></li>
-        <li><a href="#services">Glass Doors</a></li>
-        <li><a href="#services">Shower Cabins</a></li>
-        <li><a href="#services">Steel Railings</a></li>
-        <li><a href="#services">Wallpaper &amp; Glass Paper</a></li>
+        <li><a href="#services" onclick="goHome(event,'#services')">Aluminium Windows</a></li>
+        <li><a href="#services" onclick="goHome(event,'#services')">Glass Doors</a></li>
+        <li><a href="#services" onclick="goHome(event,'#services')">Shower Cabins</a></li>
+        <li><a href="#services" onclick="goHome(event,'#services')">Steel Railings</a></li>
+        <li><a href="#services" onclick="goHome(event,'#services')">Wallpaper &amp; Glass Paper</a></li>
       </ul>
     </div>
-    <div class="footer-col">
+    <div class="foot-col">
       <h5>Contact</h5>
       <ul>
         <li><a href="tel:03214526029">0321 4526029</a></li>
-        <li><a href="https://wa.me/923214526029" target="_blank">WhatsApp Us</a></li>
-        <li><a href="https://maps.google.com/?q=Mumtaz+Windoor+Aluminium+Lahore" target="_blank">Find on Maps</a></li>
+        <li><a href="https://wa.me/923214526029" target="_blank">WhatsApp</a></li>
+        <li><a href="https://maps.google.com/?q=Mumtaz+Windoor+Lahore" target="_blank">Find on Maps</a></li>
         <li><a href="https://www.google.com/search?q=Mumtaz+Windoor+Aluminium+%26+Glass+works+Reviews" target="_blank">Google Reviews</a></li>
       </ul>
     </div>
   </div>
-  <div class="footer-bottom">
-    <p>© 2025 Mumtaz Windoor Aluminium &amp; Glass Works · Lahore, Pakistan</p>
-    <a href="#" class="admin-link-footer" onclick="event.preventDefault();openLogin()">Admin</a>
+  <div class="foot-bottom">
+    <p>&copy; 2025 Mumtaz Windoor Aluminium &amp; Glass Works &middot; Lahore, Pakistan</p>
+    <a href="#" class="admin-link" onclick="event.preventDefault();openLogin()">Admin</a>
   </div>
 </footer>
+</div><!-- end page-main -->
 
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/923214526029" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+<!-- ========== PROJECT DETAIL PAGE ========== -->
+<div id="page-detail">
+  <button class="detail-back" onclick="goBack()">
+    <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    Back to portfolio
+  </button>
+  <!-- Carousel -->
+  <div class="carousel-wrap" id="detail-carousel">
+    <div class="carousel-track" id="carousel-track"></div>
+    <button class="carousel-btn carousel-prev" id="car-prev" onclick="carMove(-1)">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="carousel-btn carousel-next" id="car-next" onclick="carMove(1)">
+      <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+    <div class="carousel-counter" id="car-counter">1 / 1</div>
+  </div>
+  <!-- Dots -->
+  <div class="carousel-dots" id="car-dots"></div>
+  <!-- Thumbnail strip -->
+  <div class="thumb-strip" id="thumb-strip"></div>
+  <!-- Info -->
+  <div class="detail-body">
+    <div class="detail-cat" id="detail-cat"></div>
+    <div class="detail-title" id="detail-title"></div>
+    <div class="detail-desc" id="detail-desc"></div>
+    <div class="detail-cta-bar">
+      <p>Interested in a similar project? Get a free quote in 24 hours.</p>
+      <a class="btn-primary" href="https://wa.me/923214526029" target="_blank" rel="noopener">WhatsApp Us &rarr;</a>
+      <a class="btn-ghost" href="#contact" onclick="goHome(event,'#contact')">Contact Form</a>
+    </div>
+    <div class="detail-related">
+      <h3>More Projects</h3>
+      <div class="related-grid" id="related-grid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/923214526029" target="_blank" rel="noopener" class="wa-float">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
 </a>
 
 <script>
-// ── STORAGE KEY & PASSWORD ──
-const STORAGE_KEY = 'mw_portfolio_v1';
-const ADMIN_PASSWORD = 'mumtaz2024'; // Change this password!
+const STORE='mw_v2';const PWD='mumtaz2024';
+let pendingImgs=[];let carIdx=0;let curProject=null;
 
 // ── DATA ──
-function getProjects() {
-  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); } catch(e) { return []; }
-}
-function saveProjects(arr) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
-}
+function getAll(){try{return JSON.parse(localStorage.getItem(STORE)||'[]')}catch{return[]}}
+function saveAll(a){localStorage.setItem(STORE,JSON.stringify(a))}
 
-// ── GALLERY RENDER ──
-function renderGallery() {
-  const projects = getProjects();
-  const grid = document.getElementById('gallery-grid');
-  const empty = document.getElementById('gallery-empty');
-  const existing = grid.querySelectorAll('.g-item');
-  existing.forEach(e => e.remove());
-
-  if (projects.length === 0) {
-    empty.style.display = 'block';
-    return;
-  }
-  empty.style.display = 'none';
-
-  projects.forEach((p, i) => {
-    const item = document.createElement('div');
-    item.className = 'g-item';
-    const thumbInner = p.image
-      ? `<img src="${p.image}" alt="${p.title}" loading="lazy">`
-      : `<div class="g-ph"><svg viewBox="0 0 48 48" fill="none" stroke="#999" stroke-width="1.5"><rect x="4" y="8" width="40" height="32" rx="3"/><circle cx="16" cy="20" r="4"/><path d="M4 36l10-10 8 8 6-6 16 12"/></svg><span>${p.category}</span></div>`;
-    item.innerHTML = `
-      <div class="g-thumb">
-        ${thumbInner}
-        <div class="g-label">
-          <div class="g-cat-badge">${p.category}</div><br>
-          ${p.title}
-        </div>
-      </div>`;
-    if (p.image) {
-      item.onclick = () => openLightbox(p.image, p.title, p.description || p.category);
-    }
-    grid.appendChild(item);
-  });
-
-  // Update hero images with first 3 project images
-  const withImages = projects.filter(p => p.image);
-  ['hero-img-1','hero-img-2','hero-img-3'].forEach((id, idx) => {
-    const box = document.getElementById(id);
-    if (!box) return;
-    if (withImages[idx]) {
-      box.innerHTML = `<img src="${withImages[idx].image}" alt="${withImages[idx].title}" style="width:100%;height:100%;object-fit:cover">`;
-    }
+// ── IMAGE COMPRESS ──
+async function compress(dataUrl,maxW=1200,q=.78){
+  return new Promise(res=>{
+    const img=new Image();
+    img.onload=()=>{
+      const c=document.createElement('canvas');
+      let w=img.width,h=img.height;
+      if(w>maxW){h=Math.round(h*maxW/w);w=maxW}
+      c.width=w;c.height=h;
+      c.getContext('2d').drawImage(img,0,0,w,h);
+      res(c.toDataURL('image/jpeg',q));
+    };
+    img.src=dataUrl;
   });
 }
 
-// ── LIGHTBOX ──
-function openLightbox(src, title, desc) {
-  document.getElementById('lightbox-img').src = src;
-  document.getElementById('lightbox-title').textContent = title;
-  document.getElementById('lightbox-desc').textContent = desc || '';
-  document.getElementById('lightbox').classList.add('open');
-  document.body.style.overflow = 'hidden';
+// ── MULTI IMAGE UPLOAD ──
+function handleFiles(files){
+  const arr=Array.from(files);
+  arr.forEach(f=>{
+    if(f.size>8*1024*1024){showToast('Image too large (max 8MB)','error');return}
+    const r=new FileReader();
+    r.onload=async e=>{
+      const comp=await compress(e.target.result);
+      pendingImgs.push(comp);
+      renderPreviews();
+    };
+    r.readAsDataURL(f);
+  });
 }
-function closeLightbox() {
-  document.getElementById('lightbox').classList.remove('open');
-  document.body.style.overflow = '';
+function renderPreviews(){
+  const grid=document.getElementById('preview-grid');
+  const zone=document.getElementById('upload-zone');
+  const addMore=document.getElementById('add-more-lbl');
+  grid.innerHTML='';
+  if(pendingImgs.length===0){zone.style.display='';addMore.style.display='none';return}
+  zone.style.display='none';
+  addMore.style.display='inline-flex';
+  pendingImgs.forEach((src,i)=>{
+    const d=document.createElement('div');d.className='prev-item';
+    d.innerHTML=`<img src="${src}"><button class="rm-btn" onclick="removeImg(${i})">&#x2715;</button>${i===0?'<div class="main-badge">Cover</div>':''}`;
+    grid.appendChild(d);
+  });
 }
-document.getElementById('lightbox').addEventListener('click', function(e) {
-  if (e.target === this) closeLightbox();
-});
-
-// ── IMAGE UPLOAD ──
-let currentImageData = null;
-function handleImageSelect(input) {
-  const file = input.files[0];
-  if (!file) return;
-  if (file.size > 5 * 1024 * 1024) { showToast('Image must be under 5MB', 'error'); return; }
-  const reader = new FileReader();
-  reader.onload = function(e) {
-    currentImageData = e.target.result;
-    const preview = document.getElementById('img-preview');
-    preview.src = currentImageData;
-    document.getElementById('upload-zone').classList.add('has-image');
-  };
-  reader.readAsDataURL(file);
+function removeImg(i){
+  pendingImgs.splice(i,1);
+  if(pendingImgs.length===0){document.getElementById('upload-zone').style.display='';document.getElementById('img-input').value=''}
+  renderPreviews();
 }
-
-// Drag & drop
-const zone = document.getElementById('upload-zone');
-zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag-over'); });
-zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
-zone.addEventListener('drop', e => {
-  e.preventDefault();
-  zone.classList.remove('drag-over');
-  const file = e.dataTransfer.files[0];
-  if (file && file.type.startsWith('image/')) {
-    const dt = new DataTransfer();
-    dt.items.add(file);
-    document.getElementById('img-file-input').files = dt.files;
-    handleImageSelect(document.getElementById('img-file-input'));
-  }
-});
+const zone=document.getElementById('upload-zone');
+zone.addEventListener('dragover',e=>{e.preventDefault();zone.classList.add('drag-over')});
+zone.addEventListener('dragleave',()=>zone.classList.remove('drag-over'));
+zone.addEventListener('drop',e=>{e.preventDefault();zone.classList.remove('drag-over');handleFiles(e.dataTransfer.files)});
 
 // ── ADD PROJECT ──
-function addProject() {
-  const title = document.getElementById('p-title').value.trim();
-  const cat = document.getElementById('p-cat').value;
-  const desc = document.getElementById('p-desc').value.trim();
-
-  if (!title) { showToast('Please enter a project title', 'error'); return; }
-  if (!currentImageData) { showToast('Please upload a photo', 'error'); return; }
-
-  const btn = document.getElementById('add-btn');
-  btn.disabled = true;
-  btn.textContent = 'Saving...';
-
-  const projects = getProjects();
-  projects.unshift({ id: Date.now(), title, category: cat, description: desc, image: currentImageData, date: new Date().toISOString() });
-  saveProjects(projects);
-
-  // Reset form
-  document.getElementById('p-title').value = '';
-  document.getElementById('p-desc').value = '';
-  document.getElementById('img-file-input').value = '';
-  document.getElementById('img-preview').src = '';
-  document.getElementById('upload-zone').classList.remove('has-image');
-  currentImageData = null;
-  btn.disabled = false;
-  btn.textContent = 'Add to Portfolio';
-
-  renderGallery();
-  renderAdminList();
-  showToast('Project added to portfolio!', 'success');
+function addProject(){
+  const title=document.getElementById('p-title').value.trim();
+  const cat=document.getElementById('p-cat').value;
+  const desc=document.getElementById('p-desc').value.trim();
+  if(!title){showToast('Enter a project title','error');return}
+  if(pendingImgs.length===0){showToast('Upload at least one photo','error');return}
+  const btn=document.getElementById('add-btn');
+  btn.disabled=true;btn.textContent='Saving...';
+  const all=getAll();
+  all.unshift({id:Date.now(),title,category:cat,description:desc,images:[...pendingImgs],date:new Date().toISOString()});
+  saveAll(all);
+  document.getElementById('p-title').value='';
+  document.getElementById('p-desc').value='';
+  document.getElementById('img-input').value='';
+  pendingImgs=[];
+  renderPreviews();
+  document.getElementById('upload-zone').style.display='';
+  btn.disabled=false;btn.textContent='Add to Portfolio';
+  renderGallery();renderAdminList();
+  showToast(`Project added with ${all[0].images.length} photo${all[0].images.length>1?'s':''}!`,'success');
 }
-
-// ── DELETE PROJECT ──
-function deleteProject(id) {
-  if (!confirm('Remove this project from the portfolio?')) return;
-  const projects = getProjects().filter(p => p.id !== id);
-  saveProjects(projects);
-  renderGallery();
-  renderAdminList();
+function deleteProject(id){
+  if(!confirm('Remove this project?'))return;
+  saveAll(getAll().filter(p=>p.id!==id));
+  renderGallery();renderAdminList();
   showToast('Project removed');
 }
 
-// ── ADMIN LIST RENDER ──
-function renderAdminList() {
-  const projects = getProjects();
-  const list = document.getElementById('admin-posts-list');
-  const countEl = document.getElementById('post-count');
-  countEl.textContent = `${projects.length} project${projects.length !== 1 ? 's' : ''}`;
-  list.innerHTML = '';
-  if (projects.length === 0) {
-    list.innerHTML = '<div class="admin-no-posts">No projects yet. Add your first one above.</div>';
-    return;
-  }
-  projects.forEach(p => {
-    const item = document.createElement('div');
-    item.className = 'admin-post-item';
-    const thumbHtml = p.image
-      ? `<img class="admin-post-thumb" src="${p.image}" alt="${p.title}">`
-      : `<div class="admin-post-thumb-ph"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M2 17l5-5 4 4 3-3 7 7"/></svg></div>`;
-    item.innerHTML = `
-      ${thumbHtml}
-      <div class="admin-post-info">
-        <h4>${p.title}</h4>
-        <p><span class="admin-post-cat">${p.category}</span> &nbsp;${p.description ? '· ' + p.description.substring(0,50) + (p.description.length>50?'…':'') : ''}</p>
-      </div>
-      <div class="admin-post-actions">
-        <button class="admin-del-btn" onclick="deleteProject(${p.id})">Remove</button>
-      </div>`;
-    list.appendChild(item);
+// ── GALLERY RENDER ──
+function renderGallery(){
+  const all=getAll();
+  const grid=document.getElementById('gallery-grid');
+  const empty=document.getElementById('gallery-empty');
+  grid.querySelectorAll('.g-item').forEach(e=>e.remove());
+  if(!all.length){empty.style.display='block';return}
+  empty.style.display='none';
+  all.forEach((p,i)=>{
+    const item=document.createElement('div');item.className='g-item';
+    const cover=p.images&&p.images[0];
+    const imgHtml=cover?`<img src="${cover}" alt="${p.title}" loading="lazy">`:`<div class="g-ph"><svg viewBox="0 0 24 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2.5"/><path d="M2 18l5-5 4 4 3-3 8 8"/></svg><span>${p.category}</span></div>`;
+    const countBadge=p.images&&p.images.length>1?`<div class="g-count"><svg viewBox="0 0 12 12"><rect x="1" y="3" width="8" height="7" rx="1"/><path d="M3 3V2a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-1"/></svg>${p.images.length}</div>`:'';
+    item.innerHTML=`<div class="g-thumb">${imgHtml}<div class="g-overlay"></div><div class="g-info"><div class="g-cat">${p.category}</div><div class="g-title">${p.title}</div></div>${countBadge}</div>`;
+    item.onclick=()=>openDetail(p.id);
+    grid.appendChild(item);
+  });
+  // hero images
+  const withImgs=all.filter(p=>p.images&&p.images[0]);
+  [0,1,2].forEach(i=>{
+    const cell=document.getElementById(`hero-img-${i}`);
+    if(!cell)return;
+    if(withImgs[i]){cell.innerHTML=`<img src="${withImgs[i].images[0]}" alt="${withImgs[i].title}"><div class="hero-img-overlay"></div>`}
   });
 }
 
-// ── LOGIN ──
-function openLogin() {
-  document.getElementById('admin-login').classList.add('open');
-  document.getElementById('admin-pwd-input').value = '';
-  document.getElementById('login-err').style.display = 'none';
-  setTimeout(() => document.getElementById('admin-pwd-input').focus(), 100);
+// ── DETAIL PAGE ──
+function openDetail(id){
+  const all=getAll();
+  const p=all.find(x=>x.id===id);
+  if(!p)return;
+  curProject=p;carIdx=0;
+  document.getElementById('page-main').style.display='none';
+  document.getElementById('page-detail').style.display='block';
+  window.scrollTo(0,0);
+  // Category + title + desc
+  document.getElementById('detail-cat').textContent=p.category;
+  document.getElementById('detail-title').textContent=p.title;
+  document.getElementById('detail-desc').textContent=p.description||'Premium '+p.category+' installation by Mumtaz Windoor, Lahore.';
+  // Carousel
+  const track=document.getElementById('carousel-track');
+  track.innerHTML='';
+  const imgs=p.images||[];
+  imgs.forEach(src=>{
+    const slide=document.createElement('div');slide.className='carousel-slide';
+    const img=document.createElement('img');img.src=src;img.alt=p.title;
+    slide.appendChild(img);
+    slide.onclick=()=>openLightbox(src);
+    track.appendChild(slide);
+  });
+  // Dots
+  const dots=document.getElementById('car-dots');
+  dots.innerHTML='';
+  imgs.forEach((_,i)=>{
+    const d=document.createElement('button');d.className='carousel-dot'+(i===0?' active':'');
+    d.onclick=()=>carJump(i);dots.appendChild(d);
+  });
+  // Thumbs
+  const ts=document.getElementById('thumb-strip');
+  ts.innerHTML='';
+  if(imgs.length>1){
+    imgs.forEach((src,i)=>{
+      const t=document.createElement('div');t.className='thumb-item'+(i===0?' active':'');
+      const ti=document.createElement('img');ti.src=src;ti.alt='';
+      t.appendChild(ti);t.onclick=()=>carJump(i);ts.appendChild(t);
+    });
+    ts.style.display='flex';
+  } else {ts.style.display='none'}
+  // Show/hide nav buttons
+  const pr=document.getElementById('car-prev');const nx=document.getElementById('car-next');
+  pr.style.display=imgs.length>1?'flex':'none';
+  nx.style.display=imgs.length>1?'flex':'none';
+  updateCarousel();
+  // Related
+  const related=all.filter(x=>x.id!==id).slice(0,3);
+  const rg=document.getElementById('related-grid');rg.innerHTML='';
+  related.forEach(rp=>{
+    const ri=document.createElement('div');ri.className='related-item';
+    if(rp.images&&rp.images[0]){
+      const img=document.createElement('img');img.src=rp.images[0];img.alt=rp.title;img.loading='lazy';ri.appendChild(img);
+    }
+    ri.innerHTML+=`<div class="related-label">${rp.title}</div>`;
+    ri.onclick=()=>openDetail(rp.id);rg.appendChild(ri);
+  });
+  if(!related.length)document.querySelector('.detail-related').style.display='none';
+  else document.querySelector('.detail-related').style.display='block';
 }
-function closeLogin() {
-  document.getElementById('admin-login').classList.remove('open');
+function carMove(dir){
+  const imgs=curProject.images||[];
+  carIdx=Math.max(0,Math.min(imgs.length-1,carIdx+dir));
+  updateCarousel();
 }
-function doLogin() {
-  const pwd = document.getElementById('admin-pwd-input').value;
-  if (pwd === ADMIN_PASSWORD) {
-    closeLogin();
-    openAdmin();
-  } else {
-    document.getElementById('login-err').style.display = 'block';
-    document.getElementById('admin-pwd-input').value = '';
-    document.getElementById('admin-pwd-input').focus();
-  }
+function carJump(i){carIdx=i;updateCarousel()}
+function updateCarousel(){
+  const imgs=curProject.images||[];
+  document.getElementById('carousel-track').style.transform=`translateX(-${carIdx*100}%)`;
+  document.getElementById('car-counter').textContent=`${carIdx+1} / ${imgs.length}`;
+  document.querySelectorAll('.carousel-dot').forEach((d,i)=>d.className='carousel-dot'+(i===carIdx?' active':''));
+  document.querySelectorAll('.thumb-item').forEach((t,i)=>t.className='thumb-item'+(i===carIdx?' active':''));
+  // scroll active thumb into view
+  const activeThumb=document.querySelectorAll('.thumb-item')[carIdx];
+  if(activeThumb)activeThumb.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'});
 }
 
-// ── ADMIN OPEN/CLOSE ──
-function openAdmin() {
-  renderAdminList();
-  document.getElementById('admin-overlay').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeAdmin() {
-  document.getElementById('admin-overlay').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-// ── TOAST ──
-function showToast(msg, type='') {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.className = 'show ' + type;
-  clearTimeout(t._timer);
-  t._timer = setTimeout(() => t.className = '', 3000);
-}
-
-// ── CONTACT FORM ──
-function handleSubmit(e) {
-  e.preventDefault();
-  const name = document.getElementById('c-name').value.trim();
-  const phone = document.getElementById('c-phone').value.trim();
-  const service = document.getElementById('c-service').value;
-  const details = document.getElementById('c-details').value.trim();
-  const msg = encodeURIComponent(`Assalamu Alaikum!\n\nI'd like to request a quote.\n\nName: ${name}\nPhone: ${phone}\nService: ${service}\nDetails: ${details || 'N/A'}`);
-  window.open(`https://wa.me/923214526029?text=${msg}`, '_blank');
-}
-
-// ── NAV ──
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
-navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
-
-// Keyboard shortcuts
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') {
-    closeLightbox();
-    closeAdmin();
-    closeLogin();
-    document.body.style.overflow = '';
+// Keyboard nav
+document.addEventListener('keydown',e=>{
+  if(document.getElementById('page-detail').style.display==='block'&&!document.getElementById('lightbox').classList.contains('open')){
+    if(e.key==='ArrowLeft')carMove(-1);
+    if(e.key==='ArrowRight')carMove(1);
+    if(e.key==='Escape')goBack();
   }
 });
 
-// ── INIT ──
+// Touch swipe on carousel
+let touchStartX=0;
+document.addEventListener('touchstart',e=>{touchStartX=e.touches[0].clientX},{passive:true});
+document.addEventListener('touchend',e=>{
+  if(document.getElementById('page-detail').style.display==='block'){
+    const dx=e.changedTouches[0].clientX-touchStartX;
+    if(Math.abs(dx)>40)carMove(dx<0?1:-1);
+  }
+},{passive:true});
+
+function goBack(){
+  document.getElementById('page-detail').style.display='none';
+  document.getElementById('page-main').style.display='block';
+  curProject=null;
+  setTimeout(()=>document.getElementById('work').scrollIntoView({behavior:'smooth'}),50);
+}
+function goHome(e,hash){
+  if(e)e.preventDefault();
+  document.getElementById('page-detail').style.display='none';
+  document.getElementById('page-main').style.display='block';
+  if(hash){setTimeout(()=>{const el=document.querySelector(hash);if(el)el.scrollIntoView({behavior:'smooth'})},50)}
+  else{window.scrollTo({top:0,behavior:'smooth'})}
+  navLinks.classList.remove('open');
+}
+
+// ── LIGHTBOX ──
+function openLightbox(src){
+  document.getElementById('lb-img').src=src;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('open')}
+document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this)closeLightbox()});
+
+// ── ADMIN LIST ──
+function renderAdminList(){
+  const all=getAll();
+  const list=document.getElementById('admin-list');
+  document.getElementById('post-count').textContent=`${all.length} project${all.length!==1?'s':''}`;
+  list.innerHTML='';
+  if(!all.length){list.innerHTML='<div class="ano-posts">No projects yet. Add your first above.</div>';return}
+  all.forEach(p=>{
+    const el=document.createElement('div');el.className='apost';
+    const thumbs=(p.images||[]).slice(0,2).map(src=>`<img class="apost-thumb" src="${src}" alt="">`).join('');
+    const ph=`<div class="apost-thumb-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/></svg></div>`;
+    const imgCount=p.images&&p.images.length>1?` &middot; ${p.images.length} photos`:'';
+    el.innerHTML=`<div class="apost-thumbs">${thumbs||ph}</div><div class="apost-info"><h4>${p.title}</h4><p><span class="acat">${p.category}</span>${imgCount}${p.description?' &middot; '+p.description.substring(0,40)+(p.description.length>40?'&hellip;':''):''}</p></div><button class="adel-btn" onclick="deleteProject(${p.id})">Remove</button>`;
+    list.appendChild(el);
+  });
+}
+
+// ── ADMIN AUTH ──
+function openLogin(){document.getElementById('admin-login').classList.add('open');document.getElementById('login-err').style.display='none';document.getElementById('pwd-input').value='';setTimeout(()=>document.getElementById('pwd-input').focus(),100)}
+function closeLogin(){document.getElementById('admin-login').classList.remove('open')}
+function doLogin(){
+  if(document.getElementById('pwd-input').value===PWD){closeLogin();renderAdminList();document.getElementById('admin-overlay').classList.add('open');document.body.style.overflow='hidden'}
+  else{document.getElementById('login-err').style.display='block';document.getElementById('pwd-input').value='';document.getElementById('pwd-input').focus()}
+}
+function closeAdmin(){document.getElementById('admin-overlay').classList.remove('open');document.body.style.overflow=''}
+
+// ── CONTACT ──
+function handleContact(e){
+  e.preventDefault();
+  const name=document.getElementById('c-name').value.trim();
+  const phone=document.getElementById('c-phone').value.trim();
+  const svc=document.getElementById('c-service').value;
+  const det=document.getElementById('c-details').value.trim();
+  const msg=encodeURIComponent(`Assalamu Alaikum!\n\nQuote Request:\nName: ${name}\nPhone: ${phone}\nService: ${svc}\nDetails: ${det||'N/A'}`);
+  window.open(`https://wa.me/923214526029?text=${msg}`,'_blank');
+}
+
+// ── NAV ──
+const navLinks=document.getElementById('navLinks');
+document.getElementById('navToggle').addEventListener('click',()=>navLinks.classList.toggle('open'));
+
+// ── TOAST ──
+function showToast(msg,type=''){
+  const t=document.getElementById('toast');t.textContent=msg;t.className='show '+type;
+  clearTimeout(t._t);t._t=setTimeout(()=>t.className='',3200);
+}
+
+// ── ESC ──
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){closeLightbox();closeAdmin();closeLogin();document.body.style.overflow=''}
+});
+
+// INIT
 renderGallery();
 </script>
 </body>
