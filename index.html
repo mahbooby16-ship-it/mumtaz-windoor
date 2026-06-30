@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Mumtaz Windoor Aluminium & Glass Works — Specialists in aluminium windows, glass doors, shower cabins, stainless steel railings and wallpaper. Lahore, Pakistan.">
 <title>Mumtaz Windoor | Aluminium & Glass Works Lahore</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2222%22%20fill%3D%22%2312171D%22/%3E%3Ctext%20x%3D%2250%22%20y%3D%2264%22%20font-family%3D%22Arial%2C%20Helvetica%2C%20sans-serif%22%20font-size%3D%2240%22%20font-weight%3D%22800%22%20fill%3D%22%236FB8DA%22%20text-anchor%3D%22middle%22%3EMW%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -100,7 +101,7 @@ nav.scrolled{background:rgba(18,23,29,0.72);backdrop-filter:blur(18px);-webkit-b
 /* ============ PORTFOLIO — natural masonry, info below photo ============ */
 .port-sec{background:var(--cream2)}
 .port-hdr{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:1rem}
-#gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.25rem}
+#gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.25rem;align-items:start}
 .g-item{cursor:pointer;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh-card);transition:transform .45s var(--ease),box-shadow .45s var(--ease)}
 .g-item:hover{transform:translateY(-7px);box-shadow:0 30px 64px -16px rgba(18,23,29,0.22)}
 .g-item.wide{grid-column:span 2}
@@ -148,7 +149,7 @@ nav.scrolled{background:rgba(18,23,29,0.72);backdrop-filter:blur(18px);-webkit-b
 .det-cta p{font-size:.9rem;color:var(--ink);flex:1;min-width:200px;font-weight:500}
 .det-related{max-width:880px;margin:0 auto;padding:3.5rem 2.5rem 5rem}
 .det-related h3{font-family:'Manrope',sans-serif;font-size:1.4rem;color:var(--ink);margin-bottom:1.6rem;font-weight:800}
-.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;align-items:start}
 .rel-item{cursor:pointer;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh-card);transition:transform .35s var(--ease)}
 .rel-item:hover{transform:translateY(-5px)}
 .rel-thumb{aspect-ratio:4/3;background:var(--navy2);overflow:hidden}
@@ -302,7 +303,7 @@ footer{background:var(--navy);padding:3.5rem 2.5rem 1.75rem}
   .glass-card{max-width:340px}
   .hero h1{font-size:2.9rem}
   .svc-grid{grid-template-columns:1fr 1fr}
-  #gallery-grid{grid-template-columns:repeat(2,1fr)}
+  #gallery-grid{grid-template-columns:repeat(2,1fr);align-items:start}
   .g-item.wide{grid-column:span 1}
   .why-grid{grid-template-columns:1fr 1fr}
   .con-grid{grid-template-columns:1fr}
